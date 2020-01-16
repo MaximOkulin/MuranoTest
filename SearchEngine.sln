@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchEngine", "SearchEngine\SearchEngine.csproj", "{404CD8D5-9ABE-467B-B9DF-D48A4CC07841}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchEngine.Web", "SearchEngine\SearchEngine.Web.csproj", "{404CD8D5-9ABE-467B-B9DF-D48A4CC07841}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchEngine.Business", "SearchEngine.Business\SearchEngine.Business.csproj", "{7B61A76A-3E88-42EC-A93B-0F396CF17296}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchEngine.Business", "SearchEngine.Business\SearchEngine.Business.csproj", "{7B61A76A-3E88-42EC-A93B-0F396CF17296}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchEngine.DataAccess", "SearchEngine.DataAccess\SearchEngine.DataAccess.csproj", "{A46A3371-0134-49AB-8170-D51288BB8558}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchEngine.DataAccess", "SearchEngine.DataAccess\SearchEngine.DataAccess.csproj", "{A46A3371-0134-49AB-8170-D51288BB8558}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchEngine.Models", "SearchEngine.Models\SearchEngine.Models.csproj", "{E369EAE9-15F3-41D2-8AD0-8372A074F6D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchEngine.Models", "SearchEngine.Models\SearchEngine.Models.csproj", "{E369EAE9-15F3-41D2-8AD0-8372A074F6D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchEngine.Resources", "SearchEngine.Resources\SearchEngine.Resources.csproj", "{BC67C716-70F4-40C1-8AEC-CCE2D54F6AA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchEngine.Resources", "SearchEngine.Resources\SearchEngine.Resources.csproj", "{BC67C716-70F4-40C1-8AEC-CCE2D54F6AA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
