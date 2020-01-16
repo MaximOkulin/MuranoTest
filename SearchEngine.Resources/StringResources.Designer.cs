@@ -70,6 +70,15 @@ namespace PublicResXFileCodeGenerator {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BingSettings.
+        /// </summary>
+        public static string BingSettings {
+            get {
+                return ResourceManager.GetString("BingSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {
         ///    &quot;_type&quot;: &quot;SearchResponse&quot;,
         ///    &quot;instrumentation&quot;: {
@@ -105,6 +114,15 @@ namespace PublicResXFileCodeGenerator {
         public static string Engine {
             get {
                 return ResourceManager.GetString("Engine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GoogleSettings.
+        /// </summary>
+        public static string GoogleSettings {
+            get {
+                return ResourceManager.GetString("GoogleSettings", resourceCulture);
             }
         }
         
@@ -172,6 +190,15 @@ namespace PublicResXFileCodeGenerator {
         public static string WhiteSpaceSymbol {
             get {
                 return ResourceManager.GetString("WhiteSpaceSymbol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to YandexSettings.
+        /// </summary>
+        public static string YandexSettings {
+            get {
+                return ResourceManager.GetString("YandexSettings", resourceCulture);
             }
         }
         

@@ -120,6 +120,9 @@
   <data name="Bing" xml:space="preserve">
     <value>Bing</value>
   </data>
+  <data name="BingSettings" xml:space="preserve">
+    <value>BingSettings</value>
+  </data>
   <data name="BingTestJson" xml:space="preserve">
     <value>{
     "_type": "SearchResponse",
@@ -331,6 +334,9 @@
   </data>
   <data name="Engine" xml:space="preserve">
     <value>Engine</value>
+  </data>
+  <data name="GoogleSettings" xml:space="preserve">
+    <value>GoogleSettings</value>
   </data>
   <data name="GoogleTestJson" xml:space="preserve">
     <value>{
@@ -690,6 +696,9 @@
   </data>
   <data name="WhiteSpaceSymbol" xml:space="preserve">
     <value> </value>
+  </data>
+  <data name="YandexSettings" xml:space="preserve">
+    <value>YandexSettings</value>
   </data>
   <data name="YandexTestXml" xml:space="preserve">
     <value>&lt;?xml version="1.0" encoding="utf-8"?&gt;

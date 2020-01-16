@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace SearchEngine.Business.Responses
 {
+    /// <summary>
+    /// Base class for responses
+    /// </summary>
     public abstract class Response : IResponse
     {
         public string Name

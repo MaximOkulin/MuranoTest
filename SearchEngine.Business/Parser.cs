@@ -5,6 +5,12 @@ namespace SearchEngine.Business
 {
     public class Parser
     {
+        /// <summary>
+        /// Deserializes json to object, which implements IResponse-interface
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="response"></param>
+        /// <returns></returns>
         public static IResponse ParseJsonResponse<T>(string response)  where T : IResponse
         {
             var options = new JsonSerializerOptions
@@ -12,20 +18,20 @@ namespace SearchEngine.Business
                 PropertyNameCaseInsensitive = true
             };
 
+            IResponse result = null;
             if (response != null)
             {
                 try
                 {
-                    var pkg = JsonSerializer.Deserialize<T>(response, options);
-                    return (IResponse)pkg;
+                    result = JsonSerializer.Deserialize<T>(response, options);
                 }
                 catch
                 {
-
+                    result = null;
                 }
             }
 
-            return null;
+            return result;
         }
     }
 }

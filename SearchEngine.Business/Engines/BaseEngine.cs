@@ -9,6 +9,9 @@ using System.Threading;
 
 namespace SearchEngine.Business.Engines
 {
+    /// <summary>
+    /// Base engine ensures and describes main logic of all search engines
+    /// </summary>
     public abstract class BaseEngine : IEngine
     {
         protected static readonly HttpClient HttpClient = new HttpClient();
@@ -20,6 +23,12 @@ namespace SearchEngine.Business.Engines
             }
         }
 
+        /// <summary>
+        /// Executes search
+        /// </summary>
+        /// <param name="query"></param>
+        /// <param name="token"></param>
+        /// <returns></returns>
         public Task<IResponse> Execute(string query, CancellationToken token)
         {
             Task<IResponse> result = null;
@@ -39,6 +48,11 @@ namespace SearchEngine.Business.Engines
             return result;
         }
 
+        /// <summary>
+        /// Prepares request
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
         protected virtual string PrepareRequest(string query)
         {
             query = Uri.EscapeDataString(query.ReplaceWhiteSpaceToPlusSymbol());
@@ -49,6 +63,12 @@ namespace SearchEngine.Business.Engines
         
         protected abstract IResponse ParseResponse(string response);
 
+        /// <summary>
+        /// Executes HTTP GET-request (inherited class can to implement own method, ex. HTTP POST-request)
+        /// </summary>
+        /// <param name="requestString"></param>
+        /// <param name="token">CancellationToken</param>
+        /// <returns></returns>
 
         protected virtual async Task<string> ExecuteRequest(string requestString, CancellationToken token)
         {

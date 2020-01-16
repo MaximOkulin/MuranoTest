@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace SearchEngine.Business.Responses
 {
+    /// <summary>
+    /// Presents response from Bing
+    /// </summary>
     public class BingResponse : Response
     {
         public Webpages webPages { get; set; }

@@ -34,9 +34,9 @@ namespace SearchEngine
 
             services.AddScoped<ISearcher, Searcher>();
 
-            services.Configure<GoogleSettings>(Configuration.GetSection("GoogleSettings"));
-            services.Configure<YandexSettings>(Configuration.GetSection("YandexSettings"));
-            services.Configure<BingSettings>(Configuration.GetSection("BingSettings"));
+            services.Configure<GoogleSettings>(Configuration.GetSection(StringResources.GoogleSettings));
+            services.Configure<YandexSettings>(Configuration.GetSection(StringResources.YandexSettings));
+            services.Configure<BingSettings>(Configuration.GetSection(StringResources.BingSettings));
 
             services.AddScoped<IEngine, GoogleEngine>();
             services.AddScoped<IEngine, YandexEngine>();

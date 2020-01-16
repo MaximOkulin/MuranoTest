@@ -3,10 +3,17 @@ using System.Collections.Generic;
 
 namespace SearchEngine.Business.Responses
 {
+    /// <summary>
+    /// Presents response from google apis
+    /// </summary>
     public class GoogleResponse : Response
     {
         public List<Item> Items { get; set; }
 
+        /// <summary>
+        /// Transforms Items to List<SearchResult>
+        /// </summary>
+        /// <returns></returns>
         public override List<SearchResult> ToSearchResults()
         {
             var searchResult = new List<SearchResult>();
