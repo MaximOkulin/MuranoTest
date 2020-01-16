@@ -9,9 +9,9 @@ namespace SearchEngine.Business.Responses
     {
         public string Name
         {
-            get => GetType().Name.Replace(StringResources.Response, string.Empty);
+            get => GetType().Name.Replace(StringResources.Response, string.Empty);            
         }
-        
+
         public abstract List<SearchResult> ToSearchResults();
     }
 }

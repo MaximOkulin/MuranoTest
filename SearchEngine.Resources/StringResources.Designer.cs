@@ -70,6 +70,27 @@ namespace PublicResXFileCodeGenerator {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {
+        ///    &quot;_type&quot;: &quot;SearchResponse&quot;,
+        ///    &quot;instrumentation&quot;: {
+        ///        &quot;pingUrlBase&quot;: &quot;https://www.bingapis.com/api/ping?IG=E86668D804C149438DFC0972CE52C9E3&amp;CID=070910FF0C0362112C11188E0DD06323&amp;ID=&quot;,
+        ///        &quot;pageLoadPingUrl&quot;: &quot;https://www.bingapis.com/api/ping/pageload&quot;
+        ///    },
+        ///    &quot;webPages&quot;: {
+        ///        &quot;webSearchUrl&quot;: &quot;https://www.bing.com/search?q=bill+gates&quot;,
+        ///        &quot;webSearchUrlPingSuffix&quot;: &quot;DevEx,5425.1&quot;,
+        ///        &quot;totalEstimatedMatches&quot;: 14100000,
+        ///        &quot;value&quot;: [
+        ///            {
+        ///               [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string BingTestJson {
+            get {
+                return ResourceManager.GetString("BingTestJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SearchEngineDatabase.
         /// </summary>
         public static string DatabaseName {
@@ -147,6 +168,28 @@ namespace PublicResXFileCodeGenerator {
         public static string WhiteSpaceSymbol {
             get {
                 return ResourceManager.GetString("WhiteSpaceSymbol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+        ///&lt;yandexsearch version=&quot;1.0&quot;&gt;
+        ///    &lt;request&gt;
+        ///        &lt;query&gt;Казанский Кремль&lt;/query&gt;
+        ///        &lt;page&gt;0&lt;/page&gt;
+        ///        &lt;sortby order=&quot;descending&quot; priority=&quot;no&quot;&gt;rlv&lt;/sortby&gt;
+        ///        &lt;maxpassages/&gt;
+        ///        &lt;groupings&gt;
+        ///            &lt;groupby attr=&quot;d&quot; mode=&quot;deep&quot; groups-on-page=&quot;10&quot; docs-in-group=&quot;1&quot; curcateg=&quot;-1&quot;/&gt;
+        ///        &lt;/groupings&gt;
+        ///    &lt;/request&gt;
+        ///    &lt;response date=&quot;20200116T160853&quot;&gt;
+        ///        &lt;reqid&gt;1579190933543349-9193804179513602050792-vla1-3759-XML&lt;/reqid&gt;
+        ///   [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string YandexTestXml {
+            get {
+                return ResourceManager.GetString("YandexTestXml", resourceCulture);
             }
         }
     }

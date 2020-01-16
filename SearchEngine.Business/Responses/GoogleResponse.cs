@@ -1,5 +1,4 @@
-﻿using SearchEngine.Business.Interfaces;
-using SearchEngine.Models.Database.Business;
+﻿using SearchEngine.Models.Database.Business;
 using System.Collections.Generic;
 
 namespace SearchEngine.Business.Responses

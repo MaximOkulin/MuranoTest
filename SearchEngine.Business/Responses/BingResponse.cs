@@ -26,9 +26,6 @@ namespace SearchEngine.Business.Responses
 
     public class Webpages
     {
-        public string webSearchUrl { get; set; }
-        public string webSearchUrlPingSuffix { get; set; }
-        public int totalEstimatedMatches { get; set; }
         public Value[] value { get; set; }
     }
 

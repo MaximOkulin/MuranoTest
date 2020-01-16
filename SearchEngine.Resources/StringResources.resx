@@ -120,6 +120,212 @@
   <data name="Bing" xml:space="preserve">
     <value>Bing</value>
   </data>
+  <data name="BingTestJson" xml:space="preserve">
+    <value>{
+    "_type": "SearchResponse",
+    "instrumentation": {
+        "pingUrlBase": "https://www.bingapis.com/api/ping?IG=E86668D804C149438DFC0972CE52C9E3&amp;CID=070910FF0C0362112C11188E0DD06323&amp;ID=",
+        "pageLoadPingUrl": "https://www.bingapis.com/api/ping/pageload"
+    },
+    "webPages": {
+        "webSearchUrl": "https://www.bing.com/search?q=bill+gates",
+        "webSearchUrlPingSuffix": "DevEx,5425.1",
+        "totalEstimatedMatches": 14100000,
+        "value": [
+            {
+                "id": "https://www.bing.com/api/V7/#WebPages.0",
+                "name": "Bill &amp; Melinda Gates Foundation - Official Site",
+                "url": "http://www.gatesfoundation.org/",
+                "urlPingSuffix": "DevEx,5081.1",
+                "about": [
+                    {
+                        "name": "Bill &amp; Melinda Gates Foundation"
+                    },
+                    {
+                        "name": "Bill Gates"
+                    }
+                ],
+                "displayUrl": "www.gatesfoundation.org",
+                "snippet": "The Gates Foundation’s effort to eradicate polio offers the chance to protect millions of children from paralysis forever.",
+                "deepLinks": [
+                    {
+                        "name": "Jobs",
+                        "url": "http://www.gatesfoundation.org/jobs",
+                        "urlPingSuffix": "DevEx,5071.1"
+                    },
+                    {
+                        "name": "What We Do",
+                        "url": "http://www.gatesfoundation.org/what-we-do",
+                        "urlPingSuffix": "DevEx,5072.1"
+                    },
+                    {
+                        "name": "Apply for a Grant",
+                        "url": "http://www.gatesfoundation.org/how-we-work/resources/our-commitment-to-grantees",
+                        "urlPingSuffix": "DevEx,5073.1"
+                    },
+                    {
+                        "name": "Search Listings",
+                        "url": "http://careers.gatesfoundation.org/",
+                        "urlPingSuffix": "DevEx,5074.1"
+                    },
+                    {
+                        "name": "How We Work",
+                        "url": "http://www.gatesfoundation.org/how-we-work",
+                        "urlPingSuffix": "DevEx,5075.1"
+                    }
+                ],
+                "dateLastCrawled": "2016-02-04T17:10:00"
+            },
+            {
+                "id": "https://www.bing.com/api/V7/#WebPages.1",
+                "name": "Bill Gates - Wikipedia, the free encyclopedia",
+                "url": "https://en.wikipedia.org/wiki/Bill_Gates",
+                "urlPingSuffix": "DevEx,5097.1",
+                "about": [
+                    {
+                        "name": "Bill Gates"
+                    }
+                ],
+                "displayUrl": "https://en.wikipedia.org/wiki/Bill_Gates",
+                "snippet": "William Henry \"Bill\" Gates III (born October 28, 1955) is an American business magnate, philanthropist, investor, and computer programmer. [2] [3] In 1975 ...",
+                "dateLastCrawled": "2016-02-05T03:09:00"
+            },
+            {
+                "id": "https://www.bing.com/api/V7/#WebPages.2",
+                "name": "Bill Gates - Official Site",
+                "url": "https://www.gatesnotes.com/",
+                "urlPingSuffix": "DevEx,5110.1",
+                "displayUrl": "https://www.gatesnotes.com",
+                "snippet": "Become a Gates Notes Insider Join the Gates Notes community to access exclusive content, comment on stories, subscribe to your favorite topics and more.",
+                "dateLastCrawled": "2016-02-03T18:50:00"
+            }
+        ]
+    },
+    "images": {
+        "id": "https://www.bing.com/api/V7/#Images",
+        "readLink": "https://www.bing.com/api/V7/images/search?q=bill+gates&amp;qpvt=bill+gates&amp;qpvt=bill+gates",
+        "webSearchUrl": "https://www.bing.com/images/search?q=bill+gates&amp;qpvt=bill+gates&amp;qpvt=bill+gates",
+        "webSearchUrlPingSuffix": "DevEx,5025.1",
+        "isFamilyFriendly": true,
+        "value": [
+            {
+                "name": "Bill Gates Ranked Richest American by Forbes For 21st Straight Year",
+                "webSearchUrl": "https://www.bing.com/images/search?q=bill+gates&amp;id=A204A8572C1640DE6830782F02A63C2E825D705A&amp;FORM=IARRTH",
+                "webSearchUrlPingSuffix": "DevEx,5321.1",
+                "thumbnailUrl": "https://tse1.mm.bing.net/th?id=OIP.Me12187d95b2790e2644fdf18d5a30b3bH1&amp;pid=Api",
+                "datePublished": "2014-09-29T21:50:00",
+                "contentUrl": "http://americanlivewire.com/wp-content/uploads/bill-gates1.jpg",
+                "hostPageUrl": "http://americanlivewire.com/2014-09-29-bill-gates-ranked-richest-american-forbes-21st-straight-year/",
+                "hostPageUrlPingSuffix": "DevEx,5445.1",
+                "contentSize": "1088572 B",
+                "encodingFormat": "jpeg",
+                "hostPageDisplayUrl": "http://americanlivewire.com/2014-09-29-bill-gates-ranked-richest-american-forbes-21st-straight-year/",
+                "width": 1588,
+                "height": 2393,
+                "thumbnail": {
+                    "width": 318,
+                    "height": 480
+                }
+            }
+        ],
+        "displayShoppingSourcesBadges": false,
+        "displayRecipeSourcesBadges": true
+    },
+    "news": {
+        "id": "https://www.bing.com/api/V7/#News",
+        "readLink": "https://www.bing.com/api/V7/news/search?q=Bill+Gates",
+        "value": [
+            {
+                "name": "Bill Gates Doubles Down to Scale up Support for New Impact Investing Funds",
+                "url": "http://www.huffingtonpost.com/david-bank/bill-gates-doubles-down-t_b_9146778.html",
+                "urlPingSuffix": "DevEx,5175.1",
+                "image": {
+                    "thumbnail": {
+                        "contentUrl": "https://www.bing.com/th?id=ON.94FE743052139FA7E51134C65616EDD4&amp;pid=News",
+                        "width": 570,
+                        "height": 370
+                    }
+                },
+                "description": "ImpactAlpha.com-- When Bill Gates agreed a couple years ago to put a small piece of his personal fortune into a fund that invests in companies serving low-income customers in India, he invited the fund managers to return with a plan to scale up their ...",
+                "about": [
+                    {
+                        "readLink": "https://www.bing.com/api/V7/entities/0d47c987-0042-5576-15e8-97af601614fa",
+                        "name": "Bill Gates"
+                    },
+                    {
+                        "readLink": "https://www.bing.com/api/V7/entities/b7fff496-7062-698c-2493-fa6871cd8c66",
+                        "name": "Impact investing"
+                    }
+                ],
+                "provider": [
+                    {
+                        "_type": "Organization",
+                        "name": "The Huffington Post"
+                    }
+                ],
+                "datePublished": "2016-02-04T22:56:00",
+                "category": "Business"
+            }
+        ]
+    },
+    "relatedSearches": {
+        "id": "https://www.bing.com/api/V7/#RelatedSearches",
+        "value": [
+            {
+                "text": "Bill Gates Malaria",
+                "displayText": "Bill Gates Malaria",
+                "webSearchUrl": "https://www.bing.com/search?q=Bill+Gates+Malaria",
+                "webSearchUrlPingSuffix": "DevEx,5465.1"
+            },
+            {
+                "text": "Bill Gates Mansion",
+                "displayText": "Bill Gates Mansion",
+                "webSearchUrl": "https://www.bing.com/search?q=Bill+Gates+Mansion",
+                "webSearchUrlPingSuffix": "DevEx,5466.1"
+            }
+        ]
+    },
+    "videos": {
+        "id": "https://www.bing.com/api/V7/#Videos",
+        "readLink": "https://www.bing.com/api/V7/videos/search?q=bill+gates",
+        "webSearchUrl": "https://www.bing.com/videos/search?q=bill+gates",
+        "webSearchUrlPingSuffix": "DevEx,5053.1",
+        "isFamilyFriendly": true,
+        "value": [
+            {
+                "name": "Bill Gates 2.0",
+                "description": "For Bill Gates, technology is still the solution. He shows Charlie Rose some inventions he's working on to help heal the world.",
+                "webSearchUrl": "https://www.bing.com/videos/search?q=bill%20gates#view=detail&amp;mid=234E4D8C9DC6C5707C0E234E4D8C9DC6C5707C0E",
+                "webSearchUrlPingSuffix": "DevEx,5430.1",
+                "thumbnailUrl": "https://tse2.mm.bing.net/th?id=WN.qLvK%2bJin%2b21addnQ0lsxUw&amp;pid=Api",
+                "datePublished": "2013-05-14T18:35:52",
+                "publisher": [
+                    {
+                        "name": "YouTube"
+                    }
+                ],
+                "contentUrl": "https://www.youtube.com/watch?v=cPy0nWYYCFg",
+                "hostPageUrl": "https://www.youtube.com/watch?v=cPy0nWYYCFg",
+                "hostPageUrlPingSuffix": "DevEx,5429.1",
+                "encodingFormat": "mp4",
+                "hostPageDisplayUrl": "https://www.youtube.com/watch?v=cPy0nWYYCFg",
+                "width": 1280,
+                "height": 720,
+                "duration": "PT13M42S",
+                "motionThumbnailUrl": "https://tse2.mm.bing.net/th?id=OM.DnxwxcadjE1OIw&amp;pid=Api",
+                "embedHtml": "&lt;iframe width=\"1280\" height=\"720\" src=\"http://www.youtube.com/embed/cPy0nWYYCFg?autoplay=1\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;",
+                "allowHttpsEmbed": true,
+                "viewCount": 80292,
+                "thumbnail": {
+                    "width": 300,
+                    "height": 168
+                }
+            }
+        ],
+        "scenario": "List"
+    }
+}</value>
+  </data>
   <data name="DatabaseName" xml:space="preserve">
     <value>SearchEngineDatabase</value>
   </data>
@@ -146,5 +352,174 @@
   </data>
   <data name="WhiteSpaceSymbol" xml:space="preserve">
     <value> </value>
+  </data>
+  <data name="YandexTestXml" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;yandexsearch version="1.0"&gt;
+    &lt;request&gt;
+        &lt;query&gt;Казанский Кремль&lt;/query&gt;
+        &lt;page&gt;0&lt;/page&gt;
+        &lt;sortby order="descending" priority="no"&gt;rlv&lt;/sortby&gt;
+        &lt;maxpassages/&gt;
+        &lt;groupings&gt;
+            &lt;groupby attr="d" mode="deep" groups-on-page="10" docs-in-group="1" curcateg="-1"/&gt;
+        &lt;/groupings&gt;
+    &lt;/request&gt;
+    &lt;response date="20200116T160853"&gt;
+        &lt;reqid&gt;1579190933543349-9193804179513602050792-vla1-3759-XML&lt;/reqid&gt;
+        &lt;found priority="phrase"&gt;1954129&lt;/found&gt;
+        &lt;found priority="strict"&gt;1954129&lt;/found&gt;
+        &lt;found priority="all"&gt;1954129&lt;/found&gt;
+        &lt;found-human&gt;2 mln. answers found&lt;/found-human&gt;
+        &lt;results&gt;
+            &lt;grouping attr="d" mode="deep" groups-on-page="10" docs-in-group="1" curcateg="-1"&gt;
+                &lt;found priority="phrase"&gt;1455&lt;/found&gt;
+                &lt;found priority="strict"&gt;1455&lt;/found&gt;
+                &lt;found priority="all"&gt;1455&lt;/found&gt;
+                &lt;found-docs priority="phrase"&gt;5649&lt;/found-docs&gt;
+                &lt;found-docs priority="strict"&gt;5649&lt;/found-docs&gt;
+                &lt;found-docs priority="all"&gt;5649&lt;/found-docs&gt;
+                &lt;found-docs-human&gt;found 6 thsd. answers&lt;/found-docs-human&gt;
+                &lt;page first="1" last="10"&gt;0&lt;/page&gt;
+                &lt;group&gt;
+                    &lt;categ attr="d" name="kazan-kremlin.ru"/&gt;
+                    &lt;doccount&gt;2754&lt;/doccount&gt;
+                    &lt;relevance/&gt;
+                    &lt;doc id="ZD874C532628AB73D"&gt;
+                        &lt;relevance/&gt;
+                        &lt;url&gt;https://kazan-kremlin.ru/&lt;/url&gt;
+                        &lt;domain&gt;kazan-kremlin.ru&lt;/domain&gt;
+                        &lt;title&gt;В Благовещенском соборе &lt;hlword&gt;Казанского&lt;/hlword&gt;
+                            &lt;hlword&gt;Кремля&lt;/hlword&gt; состоится...&lt;/title&gt;
+                        &lt;modtime&gt;20080329T125119&lt;/modtime&gt;
+                        &lt;size&gt;962&lt;/size&gt;
+                        &lt;charset&gt;utf-8&lt;/charset&gt;
+                        &lt;passages&gt;
+                            &lt;passage&gt;Экскурсионный отдел &lt;hlword&gt;Казанского&lt;/hlword&gt;
+                                &lt;hlword&gt;Кремля&lt;/hlword&gt; приглашает гостей города и казанцев
+                                совершить прогулку по &lt;hlword&gt;Кремлю&lt;/hlword&gt; в сопровождении
+                                профессионального экскурсовода.&lt;/passage&gt;
+                        &lt;/passages&gt;
+                        &lt;properties&gt;
+                            &lt;_PassagesType&gt;0&lt;/_PassagesType&gt;
+                            &lt;lang&gt;ru&lt;/lang&gt;
+                        &lt;/properties&gt;
+                        &lt;mime-type&gt;text/html&lt;/mime-type&gt;
+                        &lt;saved-copy-url&gt;https://yandexwebcache.net/yandbtm?lang=ru&amp;amp;fmode=inject&amp;amp;tm=1579190933&amp;amp;tld=com&amp;amp;la=1578916352&amp;amp;text=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%9A%D1%80%D0%B5%D0%BC%D0%BB%D1%8C&amp;amp;url=https%3A%2F%2Fkazan-kremlin.ru%2F&amp;amp;l10n=en&amp;amp;mime=html&amp;amp;sign=d7c70ac9b5b946832337521cd22d03a3&amp;amp;keyno=0&lt;/saved-copy-url&gt;
+                    &lt;/doc&gt;
+                &lt;/group&gt;
+                &lt;group&gt;
+                    &lt;categ attr="d" name="wikipedia.org"/&gt;
+                    &lt;doccount&gt;1617&lt;/doccount&gt;
+                    &lt;relevance/&gt;
+                    &lt;doc id="Z1E747786C4BF3939"&gt;
+                        &lt;relevance/&gt;
+                        &lt;url&gt;https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C&lt;/url&gt;
+                        &lt;domain&gt;ru.wikipedia.org&lt;/domain&gt;
+                        &lt;title&gt;&lt;hlword&gt;Казанский&lt;/hlword&gt;
+                            &lt;hlword&gt;кремль&lt;/hlword&gt; — Википедия&lt;/title&gt;
+                        &lt;headline&gt;&lt;hlword&gt;Каза́нский&lt;/hlword&gt;
+                            &lt;hlword&gt;Кремль&lt;/hlword&gt; (тат. Казан кирмәне, Qazan kirmäne) — древнейшая
+                            часть &lt;hlword&gt;Казани&lt;/hlword&gt;, комплекс архитектурных, исторических и
+                            археологических памятников, раскрывающих многовековую историю города:
+                            археологические остатки первого (XII—XIII вв.), второго...&lt;/headline&gt;
+                        &lt;modtime&gt;20121220T001457&lt;/modtime&gt;
+                        &lt;size&gt;8345&lt;/size&gt;
+                        &lt;charset&gt;utf-8&lt;/charset&gt;
+                        &lt;properties&gt;
+                            &lt;TurboCgiUrl&gt;https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C&lt;/TurboCgiUrl&gt;
+                            &lt;TurboFallback&gt;https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C&lt;/TurboFallback&gt;
+                            &lt;TurboLink&gt;https://yandex.ru/turbo?text=https%3A//ru.wikipedia.org/wiki/%25D0%259A%25D0%25B0%25D0%25B7%25D0%25B0%25D0%25BD%25D1%2581%25D0%25BA%25D0%25B8%25D0%25B9_%25D0%25BA%25D1%2580%25D0%25B5%25D0%25BC%25D0%25BB%25D1%258C&lt;/TurboLink&gt;
+                            &lt;_PassagesType&gt;0&lt;/_PassagesType&gt;
+                            &lt;lang&gt;ru&lt;/lang&gt;
+                        &lt;/properties&gt;
+                        &lt;mime-type&gt;text/html&lt;/mime-type&gt;
+                        &lt;saved-copy-url&gt;https://yandexwebcache.net/yandbtm?lang=ru&amp;amp;fmode=inject&amp;amp;tm=1579190933&amp;amp;tld=com&amp;amp;la=1578916480&amp;amp;text=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%9A%D1%80%D0%B5%D0%BC%D0%BB%D1%8C&amp;amp;url=https%3A%2F%2Fru.wikipedia.org%2Fwiki%2F%25D0%259A%25D0%25B0%25D0%25B7%25D0%25B0%25D0%25BD%25D1%2581%25D0%25BA%25D0%25B8%25D0%25B9_%25D0%25BA%25D1%2580%25D0%25B5%25D0%25BC%25D0%25BB%25D1%258C&amp;amp;l10n=en&amp;amp;mime=html&amp;amp;sign=0229a41e352efa5e08226b0c43ca3cc5&amp;amp;keyno=0&lt;/saved-copy-url&gt;
+                    &lt;/doc&gt;
+                &lt;/group&gt;
+                &lt;group&gt;
+                    &lt;categ attr="d" name="kazantravel.ru"/&gt;
+                    &lt;doccount&gt;24&lt;/doccount&gt;
+                    &lt;relevance/&gt;
+                    &lt;doc id="Z36FFFE53A8766A8F"&gt;
+                        &lt;relevance/&gt;
+                        &lt;url&gt;https://kazantravel.ru/attractions/kazanskiy-kreml/&lt;/url&gt;
+                        &lt;domain&gt;kazantravel.ru&lt;/domain&gt;
+                        &lt;title&gt;&lt;hlword&gt;Казанский&lt;/hlword&gt;
+                            &lt;hlword&gt;Кремль&lt;/hlword&gt; - описание, история, фото, музеи,
+                            экскурсии&lt;/title&gt;
+                        &lt;headline&gt;СОДЕРЖАНИЕ: История. Достопримечательности. Башни
+                                &lt;hlword&gt;Казанского&lt;/hlword&gt;
+                            &lt;hlword&gt;Кремля&lt;/hlword&gt;. Православные святыни. Мусульманские памятники.
+                            Исторические сооружения. Интересные факты.&lt;/headline&gt;
+                        &lt;modtime&gt;20160925T212202&lt;/modtime&gt;
+                        &lt;size&gt;2978&lt;/size&gt;
+                        &lt;charset&gt;utf-8&lt;/charset&gt;
+                        &lt;properties&gt;
+                            &lt;_PassagesType&gt;0&lt;/_PassagesType&gt;
+                            &lt;lang&gt;ru&lt;/lang&gt;
+                        &lt;/properties&gt;
+                        &lt;mime-type&gt;text/html&lt;/mime-type&gt;
+                        &lt;saved-copy-url&gt;https://yandexwebcache.net/yandbtm?lang=ru&amp;amp;fmode=inject&amp;amp;tm=1579190933&amp;amp;tld=com&amp;amp;la=1578909184&amp;amp;text=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%9A%D1%80%D0%B5%D0%BC%D0%BB%D1%8C&amp;amp;url=https%3A%2F%2Fkazantravel.ru%2Fattractions%2Fkazanskiy-kreml%2F&amp;amp;l10n=en&amp;amp;mime=html&amp;amp;sign=3ef46df5824bfaefffc0bd00c075174e&amp;amp;keyno=0&lt;/saved-copy-url&gt;
+                    &lt;/doc&gt;
+                &lt;/group&gt;
+                &lt;group&gt;
+                    &lt;categ attr="d" name="wikiway.com"/&gt;
+                    &lt;doccount&gt;57&lt;/doccount&gt;
+                    &lt;relevance/&gt;
+                    &lt;doc id="Z70C3A74CB31A84F6"&gt;
+                        &lt;relevance/&gt;
+                        &lt;url&gt;https://wikiway.com/russia/kazan/kazanskiy-kreml/&lt;/url&gt;
+                        &lt;domain&gt;wikiway.com&lt;/domain&gt;
+                        &lt;title&gt;&lt;hlword&gt;Казанский&lt;/hlword&gt;
+                            &lt;hlword&gt;кремль&lt;/hlword&gt; — официальная информация с фото&lt;/title&gt;
+                        &lt;modtime&gt;20150131T002858&lt;/modtime&gt;
+                        &lt;size&gt;1800&lt;/size&gt;
+                        &lt;charset&gt;utf-8&lt;/charset&gt;
+                        &lt;passages&gt;
+                            &lt;passage&gt;&lt;hlword&gt;Казанский&lt;/hlword&gt;
+                                &lt;hlword&gt;Кремль&lt;/hlword&gt; – крепость, расположенная в самом «сердце»
+                                города. Комплекс занимает внушительную территорию и напоминает музей
+                                под открытым небом.&lt;/passage&gt;
+                        &lt;/passages&gt;
+                        &lt;properties&gt;
+                            &lt;_PassagesType&gt;0&lt;/_PassagesType&gt;
+                            &lt;lang&gt;ru&lt;/lang&gt;
+                        &lt;/properties&gt;
+                        &lt;mime-type&gt;text/html&lt;/mime-type&gt;
+                        &lt;saved-copy-url&gt;https://yandexwebcache.net/yandbtm?lang=ru&amp;amp;fmode=inject&amp;amp;tm=1579190933&amp;amp;tld=com&amp;amp;la=1578879360&amp;amp;text=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%9A%D1%80%D0%B5%D0%BC%D0%BB%D1%8C&amp;amp;url=https%3A%2F%2Fwikiway.com%2Frussia%2Fkazan%2Fkazanskiy-kreml%2F&amp;amp;l10n=en&amp;amp;mime=html&amp;amp;sign=980b7ac6a80f8e43c2f237a38d09bdea&amp;amp;keyno=0&lt;/saved-copy-url&gt;
+                    &lt;/doc&gt;
+                &lt;/group&gt;
+                &lt;group&gt;
+                    &lt;categ attr="d" name="vk.com"/&gt;
+                    &lt;doccount&gt;261&lt;/doccount&gt;
+                    &lt;relevance/&gt;
+                    &lt;doc id="Z42DAB1958268F4D1"&gt;
+                        &lt;relevance/&gt;
+                        &lt;url&gt;https://vk.com/kazan_kremlin&lt;/url&gt;
+                        &lt;domain&gt;vk.com&lt;/domain&gt;
+                        &lt;title&gt;Музей-заповедник &amp;quot;&lt;hlword&gt;Казанский&lt;/hlword&gt;
+                            &lt;hlword&gt;Кремль&lt;/hlword&gt;&amp;quot; | ВКонтакте&lt;/title&gt;
+                        &lt;modtime&gt;20130816T051113&lt;/modtime&gt;
+                        &lt;size&gt;2425&lt;/size&gt;
+                        &lt;charset&gt;windows-1251&lt;/charset&gt;
+                        &lt;passages&gt;
+                            &lt;passage&gt;Музей-заповедник «&lt;hlword&gt;Казанский&lt;/hlword&gt;
+                                &lt;hlword&gt;Кремль&lt;/hlword&gt;» является уникальным архитектурным и
+                                историческим памятником, в камне соединившим татарские и русские,
+                                западные и восточные традиции...&lt;/passage&gt;
+                        &lt;/passages&gt;
+                        &lt;properties&gt;
+                            &lt;_PassagesType&gt;0&lt;/_PassagesType&gt;
+                            &lt;lang&gt;ru&lt;/lang&gt;
+                        &lt;/properties&gt;
+                        &lt;mime-type&gt;text/html&lt;/mime-type&gt;
+                        &lt;saved-copy-url&gt;https://yandexwebcache.net/yandbtm?lang=ru&amp;amp;fmode=inject&amp;amp;tm=1579190933&amp;amp;tld=com&amp;amp;la=1578874240&amp;amp;text=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%9A%D1%80%D0%B5%D0%BC%D0%BB%D1%8C&amp;amp;url=https%3A%2F%2Fvk.com%2Fkazan_kremlin&amp;amp;l10n=en&amp;amp;mime=html&amp;amp;sign=2ec188376d34e72f4598aba65b185449&amp;amp;keyno=0&lt;/saved-copy-url&gt;
+                    &lt;/doc&gt;
+                &lt;/group&gt;
+            &lt;/grouping&gt;
+        &lt;/results&gt;
+    &lt;/response&gt;
+&lt;/yandexsearch&gt;</value>
   </data>
 </root>
