@@ -13,12 +13,8 @@
             url: route,
             type: "post",
             dataType: "html",
-            data: {
-                searchTemplate:
-                {
-                    template: template
-                }
-            }
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({ template: template })
         }).fail((r) => {
             console.error(r);
             deferred.reject(r);

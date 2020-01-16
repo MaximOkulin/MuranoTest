@@ -26,11 +26,11 @@ namespace SearchEngine.Business.Engines
             try
             {
                 var requestString = PrepareRequest(query);
-                var response = ExecuteRequest(requestString, token);
+                var response = ExecuteRequest(requestString, token).Result;
                 if (response != null)
                 {
-                    result = response.ContinueWith(p => ParseResponse(p.Result)).Result;
-                }                
+                    result = Task.FromResult(ParseResponse(response));
+                }               
             }
             catch(Exception)
             {
@@ -41,12 +41,13 @@ namespace SearchEngine.Business.Engines
 
         protected virtual string PrepareRequest(string query)
         {
-            string request = string.Format(Settings.RequestFormat, Settings.Value, query.ReplaceWhiteSpaceToPlusSymbol());
+            query = Uri.EscapeDataString(query.ReplaceWhiteSpaceToPlusSymbol());
+            string request = string.Format(Settings.RequestFormat, Settings.Value, query);
 
             return request;
         }
         
-        protected abstract Task<IResponse> ParseResponse(string response);
+        protected abstract IResponse ParseResponse(string response);
 
 
         protected virtual async Task<string> ExecuteRequest(string requestString, CancellationToken token)

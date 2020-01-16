@@ -13,15 +13,9 @@ namespace SearchEngine.Business.Engines
             Settings = settings.Value;
         }
 
-        protected override async Task<IResponse> ParseResponse(string response)
+        protected override IResponse ParseResponse(string response)
         {
-            var task = Parser.ParseJsonResponse<GoogleResponse>(response);
-            if (task != null)
-            {
-                return await task;
-            }
-
-            return null;
+            return Parser.ParseJsonResponse<GoogleResponse>(response);
         }
     }
 }

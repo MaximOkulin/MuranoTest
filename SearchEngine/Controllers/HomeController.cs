@@ -37,7 +37,7 @@ namespace SearchEngine.Controllers
             public string Template { get; set; }
         }
              
-        public async Task<IActionResult> GlobalSearch([FromHeader]SearchTemplate searchTemplate)
+        public async Task<IActionResult> GlobalSearch([FromBody]SearchTemplate searchTemplate)
         {
             var searchResultInfo = await _searcher.SearchAsync(searchTemplate.Template);
 
@@ -56,7 +56,7 @@ namespace SearchEngine.Controllers
             return PartialView("SearchResultTable", searchResultInfo.SearchResults);
         }
 
-        public async Task<IActionResult> LocalSearch([FromHeader]SearchTemplate searchTemplate)
+        public async Task<IActionResult> LocalSearch([FromBody]SearchTemplate searchTemplate)
         {
             searchTemplate.Template = searchTemplate.Template ?? string.Empty;
 

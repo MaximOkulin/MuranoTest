@@ -1,12 +1,11 @@
 ﻿using SearchEngine.Business.Interfaces;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace SearchEngine.Business
 {
     public class Parser
     {
-        public static Task<IResponse> ParseJsonResponse<T>(string response)  where T : IResponse
+        public static IResponse ParseJsonResponse<T>(string response)  where T : IResponse
         {
             var options = new JsonSerializerOptions
             {
@@ -18,7 +17,7 @@ namespace SearchEngine.Business
                 try
                 {
                     var pkg = JsonSerializer.Deserialize<T>(response, options);
-                    return Task.FromResult((IResponse)pkg);
+                    return (IResponse)pkg;
                 }
                 catch
                 {

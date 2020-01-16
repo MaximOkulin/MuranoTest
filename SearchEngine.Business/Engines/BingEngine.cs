@@ -24,15 +24,9 @@ namespace SearchEngine.Business.Engines
             return await base.ExecuteRequest(requestString, token);
         }
 
-        protected override async Task<IResponse> ParseResponse(string response)
+        protected override IResponse ParseResponse(string response)
         {
-            var task = Parser.ParseJsonResponse<BingResponse>(response);
-            if (task != null)
-            {
-                return await task;
-            }
-           
-            return null;
+            return Parser.ParseJsonResponse<BingResponse>(response);
         }
     }
 }

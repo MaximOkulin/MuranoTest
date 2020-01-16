@@ -4,7 +4,6 @@ using SearchEngine.Business.Interfaces;
 using SearchEngine.Business.Responses;
 using SearchEngine.Models.Settings;
 using System.IO;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace SearchEngine.Business.Engines
@@ -16,7 +15,7 @@ namespace SearchEngine.Business.Engines
             Settings = settings.Value;
         }
 
-        protected override async Task<IResponse> ParseResponse(string response)
+        protected override IResponse ParseResponse(string response)
         {
             if (response != null)
             {
@@ -39,7 +38,7 @@ namespace SearchEngine.Business.Engines
 
                 if (pkg != null)
                 {
-                    return await Task.FromResult(pkg);
+                    return pkg;
                 }
             }
 
