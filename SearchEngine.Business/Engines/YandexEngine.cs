@@ -5,6 +5,8 @@ using SearchEngine.Business.Responses;
 using SearchEngine.Models.Settings;
 using System.IO;
 using System.Xml.Serialization;
+using System;
+using System.Text.RegularExpressions;
 
 namespace SearchEngine.Business.Engines
 {
@@ -38,6 +40,13 @@ namespace SearchEngine.Business.Engines
 
                 if (pkg != null)
                 {
+                    var groups = pkg.response.results.grouping.group;
+
+                    foreach(var gr in groups)
+                    {
+                        gr.doc.title = Regex.Replace(gr.doc.title, @"\n", string.Empty);
+                    }
+
                     return pkg;
                 }
             }

@@ -5,7 +5,6 @@ using SearchEngine.Business.Interfaces;
 using SearchEngine.Business.Responses;
 using SearchEngine.Models.Settings;
 using SearchEngine.Tests.Helpers;
-using System.Threading.Tasks;
 using FluentAssertions;
 using Xunit;
 
@@ -20,24 +19,27 @@ namespace SearchEngine.Tests
 
             }
 
-            public async Task<IResponse> ParseReponse(string response)
+            public new IResponse ParseResponse(string response)
             {
-                return await base.ParseResponse(response);
+                return base.ParseResponse(response);
             }
         }
 
         [Fact]
-        public void ParseReponse_Should_BeEquivalentTo()
+        public void ParseResponse_Should_BeEquivalentTo_With_5Items()
         {
+            // arrange
             IOptions<YandexSettings> options = Options.Create<YandexSettings>(new YandexSettings());
             var yandexEngine = new YandexEngineChild(options);
 
             yandexsearch expected = TestHelper.GetTestYandexSearch();
 
-            var actual = yandexEngine.ParseReponse(StringResources.YandexTestXml).Result;
+            // act
+            var actual = yandexEngine.ParseResponse(StringResources.YandexTestXml);
 
             var act = actual as yandexsearch;
 
+            // assert
             expected.Should()
                 .BeEquivalentTo(act, options => options.Including(r => r.response.results.grouping.group).Excluding(o => o.Name));
         }

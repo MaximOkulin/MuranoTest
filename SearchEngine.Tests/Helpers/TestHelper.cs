@@ -44,7 +44,7 @@ namespace SearchEngine.Tests.Helpers
                                         doc = new yandexsearchResponseResultsGroupingGroupDoc
                                         {
                                             title = "Казанский Кремль - описание, история, фото, музеи, экскурсии",
-                                            url = "https://kazantravel.ru/attractions/kazanskiy-kreml"
+                                            url = "https://kazantravel.ru/attractions/kazanskiy-kreml/"
                                         }
                                     },
                                     new yandexsearchResponseResultsGroupingGroup
@@ -52,7 +52,7 @@ namespace SearchEngine.Tests.Helpers
                                         doc = new yandexsearchResponseResultsGroupingGroupDoc
                                         {
                                             title = "Казанский кремль — официальная информация с фото",
-                                            url = "https://wikiway.com/russia/kazan/kazanskiy-kreml"
+                                            url = "https://wikiway.com/russia/kazan/kazanskiy-kreml/"
                                         }
                                     },
                                     new yandexsearchResponseResultsGroupingGroup

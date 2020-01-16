@@ -2,7 +2,6 @@
 using SearchEngine.Business.Interfaces;
 using SearchEngine.Business.Responses;
 using SearchEngine.Models.Settings;
-using System.Threading.Tasks;
 
 namespace SearchEngine.Business.Engines
 {

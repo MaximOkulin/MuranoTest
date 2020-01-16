@@ -38,7 +38,7 @@ namespace SearchEngine
             services.Configure<YandexSettings>(Configuration.GetSection("YandexSettings"));
             services.Configure<BingSettings>(Configuration.GetSection("BingSettings"));
 
-            //services.AddScoped<IEngine, ddoogleEngine>();
+            services.AddScoped<IEngine, GoogleEngine>();
             services.AddScoped<IEngine, YandexEngine>();
             services.AddScoped<IEngine, BingEngine>();
         }

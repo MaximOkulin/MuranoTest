@@ -109,6 +109,19 @@ namespace PublicResXFileCodeGenerator {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {
+        ///    &quot;kind&quot;: &quot;customsearch#search&quot;,
+        ///    &quot;url&quot;: {
+        ///        &quot;type&quot;: &quot;application/json&quot;,
+        ///        &quot;template&quot;: &quot;https://www.googleapis.com/customsearch/v1?q={searchTerms}&amp;num={count?}&amp;start={startIndex?}&amp;lr={language?}&amp;safe={safe?}&amp;cx={cx?}&amp;sort={sort?}&amp;filter={filter?}&amp;gl={gl?}&amp;cr={cr?}&amp;googlehost={googleHost?}&amp;c2coff={disableCnTwTranslation?}&amp;hq={hq?}&amp;hl={hl?}&amp;siteSearch={siteSearch?}&amp;siteSearchFilter={siteSearchFilter?}&amp;exactTerms={exactTerms?}&amp;excludeTerms={excludeTerms?}&amp;linkSite={linkSite?}&amp;orTerms={or [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string GoogleTestJson {
+            get {
+                return ResourceManager.GetString("GoogleTestJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ocp-Apim-Subscription-Key.
         /// </summary>
         public static string OcpApimSubscriptionKey {
@@ -150,15 +163,6 @@ namespace PublicResXFileCodeGenerator {
         public static string SearchEngineBusinessEngines {
             get {
                 return ResourceManager.GetString("SearchEngineBusinessEngines", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        public static string String1 {
-            get {
-                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
         

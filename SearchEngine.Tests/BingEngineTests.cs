@@ -1,6 +1,5 @@
 using SearchEngine.Business.Engines;
 using Xunit;
-using System.Threading.Tasks;
 using SearchEngine.Business.Interfaces;
 using SearchEngine.Business.Responses;
 using PublicResXFileCodeGenerator;
@@ -20,18 +19,18 @@ namespace SearchEngine.Tests
                 
             }
 
-            public async Task<IResponse> ParseReponse(string response)
+            public new IResponse ParseResponse(string response)
             {
-                return await base.ParseResponse(response);
+                return base.ParseResponse(response);
             }
         }
 
         [Fact]
         public void ParseResponse_Should_BeEquivalentTo_With_3Items()
         {
+            // arrange
             IOptions<BingSettings> someOptions = Options.Create<BingSettings>(new BingSettings());
             var bingEngine = new BingEngineChild(someOptions);
-
 
             BingResponse expected = new BingResponse()
             {
@@ -44,9 +43,12 @@ namespace SearchEngine.Tests
                 }
             };
 
-            var actual = bingEngine.ParseReponse(StringResources.BingTestJson).Result;
+            // act
+            var actual = bingEngine.ParseResponse(StringResources.BingTestJson);
 
             var act = actual as BingResponse;
+
+            // assert
             expected.Should()
                 .BeEquivalentTo(act, options => options.Including(o => o.webPages).Excluding(o => o.Name));
         }
