@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using SearchEngine.Business.Interfaces;
 using SearchEngine.Business.Responses;
-using SearchEngine.Models.Settings;
+using SearchEngine.Business.Settings;
 
 namespace SearchEngine.Business.Engines
 {

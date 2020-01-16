@@ -2,11 +2,11 @@
 using SearchEngine.Business.Extensions;
 using SearchEngine.Business.Interfaces;
 using SearchEngine.Business.Responses;
-using SearchEngine.Models.Settings;
 using System.IO;
 using System.Xml.Serialization;
 using System;
 using System.Text.RegularExpressions;
+using SearchEngine.Business.Settings;
 
 namespace SearchEngine.Business.Engines
 {

@@ -4,8 +4,8 @@ using SearchEngine.Business.Interfaces;
 using SearchEngine.Business.Responses;
 using PublicResXFileCodeGenerator;
 using Microsoft.Extensions.Options;
-using SearchEngine.Models.Settings;
 using FluentAssertions;
+using SearchEngine.Business.Settings;
 
 namespace SearchEngine.Tests
 {

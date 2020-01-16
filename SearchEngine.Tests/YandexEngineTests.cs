@@ -3,10 +3,10 @@ using PublicResXFileCodeGenerator;
 using SearchEngine.Business.Engines;
 using SearchEngine.Business.Interfaces;
 using SearchEngine.Business.Responses;
-using SearchEngine.Models.Settings;
 using SearchEngine.Tests.Helpers;
 using FluentAssertions;
 using Xunit;
+using SearchEngine.Business.Settings;
 
 namespace SearchEngine.Tests
 {

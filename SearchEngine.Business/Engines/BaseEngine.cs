@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using PublicResXFileCodeGenerator;
 using SearchEngine.Business.Interfaces;
 using SearchEngine.Business.Extensions;
-using SearchEngine.Models.Interfaces;
 using System.Threading;
 
 namespace SearchEngine.Business.Engines

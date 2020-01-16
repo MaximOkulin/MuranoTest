@@ -8,8 +8,8 @@ using PublicResXFileCodeGenerator;
 using SearchEngine.Business.Engines;
 using SearchEngine.Business.Interfaces;
 using SearchEngine.Business.Services;
+using SearchEngine.Business.Settings;
 using SearchEngine.Models;
-using SearchEngine.Models.Settings;
 
 namespace SearchEngine
 {

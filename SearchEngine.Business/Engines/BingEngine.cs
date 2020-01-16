@@ -1,12 +1,10 @@
 ﻿using SearchEngine.Business.Responses;
-using SearchEngine.Models;
 using System.Threading.Tasks;
-using System.Linq;
 using PublicResXFileCodeGenerator;
 using SearchEngine.Business.Interfaces;
 using Microsoft.Extensions.Options;
-using SearchEngine.Models.Settings;
 using System.Threading;
+using SearchEngine.Business.Settings;
 
 namespace SearchEngine.Business.Engines
 {

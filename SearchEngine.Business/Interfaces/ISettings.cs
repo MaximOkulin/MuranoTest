@@ -1,4 +1,4 @@
-﻿namespace SearchEngine.Models.Interfaces
+﻿namespace SearchEngine.Business.Interfaces
 {
     public interface ISettings
     {

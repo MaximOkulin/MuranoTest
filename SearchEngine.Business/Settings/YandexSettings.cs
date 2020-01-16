@@ -1,4 +1,4 @@
-﻿namespace SearchEngine.Models.Settings
+﻿namespace SearchEngine.Business.Settings
 {
     public class YandexSettings : Settings
     {

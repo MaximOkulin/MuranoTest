@@ -27,14 +27,14 @@ namespace SearchEngine.Models
             modelBuilder.Entity<SearchEngineType>().HasData(new SearchEngineType { Id = 3, Code = "Bing", Description = "Поисковая система Bing" });
         }
 
-        public void SaveSearchResults(List<SearchResult> searchResults, string keyWords, string engineName)
+        public void SaveSearchResults(List<SearchResult> searchResults, string query, string engineName)
         {
             var searchEngineType = SearchEngineTypes.FirstOrDefault(p => p.Code.Equals(engineName));
             if (searchEngineType != null)
             {
                 var search = new Search
                 {
-                    KeyWords = keyWords,
+                    KeyWords = query,
                     Time = DateTime.Now,
                     SearchEngineTypeId = searchEngineType.Id
                 };

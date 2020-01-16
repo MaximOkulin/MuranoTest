@@ -1,6 +1,6 @@
-﻿using SearchEngine.Models.Interfaces;
+﻿using SearchEngine.Business.Interfaces;
 
-namespace SearchEngine.Models.Settings
+namespace SearchEngine.Business.Settings
 {
     public class Settings : ISettings
     {
