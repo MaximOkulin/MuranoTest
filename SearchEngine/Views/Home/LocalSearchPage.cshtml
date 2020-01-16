@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = "_Layout";
+}
+@model SearchEngine.Models.Database.Business.Search
+
+<div style="margin-bottom: 15px">Локальный поиск</div>
+@if (Model == null)
+{
+    <div>Нет данных отображения</div>
+}
+else
+{
+    <div>
+        <input style="width: 200px" data-core-local-searchtemplate-edit type="text" />
+        <button data-core-local-search-button>Search</button>
+    </div>
+
+    <div id="searchResultContainer">
+        @await Html.PartialAsync("SearchResultTable", Model.SearchResults)
+    </div>
+}
+
+<div style="margin-top: 30px">
+    <a href="/home/index">вернуться к глобальному поиску</a>
+</div>
+

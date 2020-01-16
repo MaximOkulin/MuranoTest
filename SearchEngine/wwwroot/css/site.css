@@ -1,0 +1,33 @@
+﻿html, body, section, nav, header, div, p, ul, a, figure, article {
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font-size: 14px;
+}
+
+#searchResultContainer {
+    margin-top: 30px;
+}
+
+.search-result-table {
+    width: 30vw;
+}
+
+
+.search-result-table, .search-result-table td, .search-result-table th {
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+    .search-result-table td, .search-result-table th {
+        padding: 5px
+    }
+
+.class-of- table td:nth-of-type(2), .class-of- table th:nth-of-type(2) {
+    width: 30%;
+}
+
+

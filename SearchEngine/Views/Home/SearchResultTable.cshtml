@@ -1,0 +1,37 @@
+﻿@model IEnumerable<SearchEngine.Models.Database.Business.SearchResult>
+
+@if (@ViewBag.SearcherName != null && @ViewBag.Time != null)
+{
+    <div style="margin-bottom: 25px;">Данные получены через поисковую систему: @ViewBag.SearcherName (@ViewBag.Time.ToString("dd MMM yyyy hh:mm:ss"))</div>
+}
+
+@if (Model != null)
+    {
+        <table class="search-result-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Заголовок</th>
+                    <th>Ссылка</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    var number = 1;
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@(number)</td>
+                            <td>@(item.Description)</td>
+                            <td><a href="@(item.Url)" target="_blank">@(item.Url)</a></td>
+                        </tr>
+                        number++;
+                    }
+                }
+            </tbody>
+        </table>
+}
+else
+{
+<div style="margin-bottom: 15px">Во время поиска произошла ошибка...</div>
+}
