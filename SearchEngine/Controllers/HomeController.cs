@@ -92,7 +92,7 @@ namespace SearchEngine.Controllers
                 .Include(s => s.SearchResults)
                 .Include(s => s.SearchEngineType)
                 .OrderByDescending(s => s.Id)
-                .FirstAsync();
+                .FirstOrDefaultAsync();
 
             if (search != null)
             {
