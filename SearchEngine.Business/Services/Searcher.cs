@@ -39,27 +39,32 @@ namespace SearchEngine.Business.Services
                 tasks.Add(searchEngine.Execute(query, cts.Token));
             }
 
-            SearchResultInfo searchResultInfo = new SearchResultInfo();
+            SearchResultInfo searchResultInfo = null;
 
-            while (tasks.Count > 0)
+            while (tasks.Where(p => p != null).Count() > 0)
             {
-                Task<IResponse> currentFinishedTask = await Task.WhenAny(tasks);
+                Task<IResponse> currentFinishedTask = await Task.WhenAny(tasks.Where(t => t != null));
 
-                if (currentFinishedTask.Status == TaskStatus.RanToCompletion)
+                if (currentFinishedTask != null)
                 {
-                    var response = currentFinishedTask.Result;
-                    var searchResult = response.ToSearchResults();
-                    if (searchResult.Count > 0)
+                    if (currentFinishedTask.Status == TaskStatus.RanToCompletion)
                     {
-                        searchResultInfo.SearchResults = searchResult;
-                        searchResultInfo.EngineName = response.Name;
-                        cts.Cancel();
-                        break;
+                        var response = currentFinishedTask.Result;
+                        var searchResult = response.ToSearchResults();
+                        if (searchResult != null && searchResult.Count > 0)
+                        {
+                            searchResultInfo = new SearchResultInfo();
+                            searchResultInfo.SearchResults = searchResult;
+                            searchResultInfo.EngineName = response.Name;
+                            cts.Cancel();
+                            break;
+                        }
                     }
-                }
-                else
-                {
-                    tasks.Remove(currentFinishedTask);
+
+                    if (tasks.Contains(currentFinishedTask))
+                    {
+                        tasks.Remove(currentFinishedTask);
+                    }
                 }
             }
 

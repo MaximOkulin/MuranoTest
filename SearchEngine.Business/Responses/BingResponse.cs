@@ -12,6 +12,11 @@ namespace SearchEngine.Business.Responses
 
         public override List<SearchResult> ToSearchResults()
         {
+            if (webPages == null)
+            {
+                return null;
+            }
+
             var searchResults = new List<SearchResult>();
             
             foreach(var v in webPages.value)
