@@ -9,7 +9,7 @@ using System.Threading;
 namespace SearchEngine.Business.Engines
 {
     /// <summary>
-    /// Base engine ensures and describes main logic of all search engines
+    /// Base engine ensures and describes main logic for all search engines
     /// </summary>
     public abstract class BaseEngine : IEngine
     {
