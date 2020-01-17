@@ -25,6 +25,6 @@ namespace SearchEngine.DataAccess.Interfaces
         /// <param name="searchResults"></param>
         /// <param name="query"></param>
         /// <param name="engineName"></param>
-        void SaveSearchResults(List<SearchResult> searchResults, string query, string engineName);
+        void SaveSearchResultsAsync(List<SearchResult> searchResults, string query, string engineName);
     }
 }

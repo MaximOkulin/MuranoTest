@@ -53,7 +53,7 @@ namespace SearchEngine.DataAccess.Repositories
             return search;
         }
 
-        public void SaveSearchResults(List<SearchResult> searchResults, string query, string engineName)
+        public async void SaveSearchResultsAsync(List<SearchResult> searchResults, string query, string engineName)
         {
             var searchEngineType = _context.SearchEngineTypes.FirstOrDefault(p => p.Code.Equals(engineName));
             if (searchEngineType != null)
@@ -73,7 +73,7 @@ namespace SearchEngine.DataAccess.Repositories
                 _context.Searchs.Add(search);
                 _context.SearchResults.AddRange(searchResults);
 
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
         }
 

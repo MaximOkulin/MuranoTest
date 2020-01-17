@@ -42,7 +42,7 @@ namespace SearchEngine.Controllers
             }
             else
             {
-                _repository.SaveSearchResults(searchResultInfo.SearchResults, searchTemplate.Template, searchResultInfo.EngineName);
+                _repository.SaveSearchResultsAsync(searchResultInfo.SearchResults, searchTemplate.Template, searchResultInfo.EngineName);
             }
 
             ViewBag.SearcherName = searchResultInfo.EngineName;
