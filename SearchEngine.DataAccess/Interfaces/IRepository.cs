@@ -8,7 +8,7 @@ namespace SearchEngine.DataAccess.Interfaces
     public interface IRepository : IDisposable
     {
         /// <summary>
-        /// Returns last Search object by Id
+        /// Returns last Search object
         /// </summary>
         /// <returns></returns>
         Task<Search> GetLastSearchAsync();
