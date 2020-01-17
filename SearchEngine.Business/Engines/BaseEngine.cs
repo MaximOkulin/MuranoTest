@@ -63,7 +63,7 @@ namespace SearchEngine.Business.Engines
         protected abstract IResponse ParseResponse(string response);
 
         /// <summary>
-        /// Executes HTTP GET-request (inherited class can to implement own method, ex. HTTP POST-request)
+        /// Executes HTTP GET-request (inherited class can implement own method, ex. HTTP POST-request)
         /// </summary>
         /// <param name="requestString"></param>
         /// <param name="token">CancellationToken</param>
