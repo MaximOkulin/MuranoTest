@@ -1,30 +1,25 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
-//using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using SearchEngine.Business.Interfaces;
+using SearchEngine.DataAccess.Interfaces;
 using SearchEngine.Models;
-using SearchEngine.Models.Database.Business;
-using SearchEngine.Models.Database.Dictionaries;
 
 namespace SearchEngine.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly SearchEngineContext _context;
+        private readonly IRepository _repository;
         private ISearcher _searcher;
 
         public HomeController
         (
-            ISearcher searcher, 
-            SearchEngineContext context
+            ISearcher searcher,
+            IRepository repository
         )
         {
             _searcher = searcher;
-            _context = context;
+            _repository = repository;
         }
 
         public IActionResult Index()
@@ -47,7 +42,7 @@ namespace SearchEngine.Controllers
             }
             else
             {
-                _context.SaveSearchResults(searchResultInfo.SearchResults, searchTemplate.Template, searchResultInfo.EngineName);
+                _repository.SaveSearchResults(searchResultInfo.SearchResults, searchTemplate.Template, searchResultInfo.EngineName);
             }
 
             ViewBag.SearcherName = searchResultInfo.EngineName;
@@ -60,21 +55,7 @@ namespace SearchEngine.Controllers
         {
             searchTemplate.Template = searchTemplate.Template ?? string.Empty;
 
-            var search =  await _context.Set<Search>()
-                .OrderByDescending(s => s.Id)
-                .FirstAsync();
-
-            await _context.Set<SearchResult>()
-                .Where(sr => sr.SearchId == search.Id)
-                .LoadAsync();
-
-            await _context.Set<SearchEngineType>().LoadAsync();
-
-            search.SearchResults = _context
-                .Set<SearchResult>()
-                .Local
-                .Where(sr => sr.Description.Contains(searchTemplate.Template))
-                .ToList();
+            var search = await _repository.DoSearchByLastAsync(searchTemplate.Template);
 
             if (search != null)
             {
@@ -88,11 +69,7 @@ namespace SearchEngine.Controllers
 
         public async Task<IActionResult> LocalSearchPage()
         {
-            var search =  await _context.Set<Search>()
-                .Include(s => s.SearchResults)
-                .Include(s => s.SearchEngineType)
-                .OrderByDescending(s => s.Id)
-                .FirstOrDefaultAsync();
+            var search = await _repository.GetLastSearchAsync();
 
             if (search != null)
             {

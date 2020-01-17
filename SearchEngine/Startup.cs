@@ -9,6 +9,9 @@ using SearchEngine.Business.Engines;
 using SearchEngine.Business.Interfaces;
 using SearchEngine.Business.Services;
 using SearchEngine.Business.Settings;
+using SearchEngine.DataAccess;
+using SearchEngine.DataAccess.Interfaces;
+using SearchEngine.DataAccess.Repositories;
 using SearchEngine.Models;
 
 namespace SearchEngine
@@ -31,6 +34,8 @@ namespace SearchEngine
             services.AddDbContext<SearchEngineContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString(StringResources.DatabaseName),
                 x => x.MigrationsAssembly(StringResources.SearchEngine)));
+
+            services.AddScoped<IRepository, SQLSearchRepository>();
 
             services.AddScoped<ISearcher, Searcher>();
 
