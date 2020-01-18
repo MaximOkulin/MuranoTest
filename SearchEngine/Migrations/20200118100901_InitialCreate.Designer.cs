@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SearchEngine.DataAccess;
 
-
-namespace SearchEngine.Migrations
+namespace SearchEngine.Web.Migrations
 {
     [DbContext(typeof(SearchEngineContext))]
-    [Migration("20200115154434_InitialCreate")]
+    [Migration("20200118100901_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -167,20 +167,20 @@ namespace PublicResXFileCodeGenerator {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SearchEngine.
-        /// </summary>
-        public static string SearchEngine {
-            get {
-                return ResourceManager.GetString("SearchEngine", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to SearchEngine.Business.Engines.{0}Engine.
         /// </summary>
         public static string SearchEngineBusinessEngines {
             get {
                 return ResourceManager.GetString("SearchEngineBusinessEngines", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SearchEngine.Web.
+        /// </summary>
+        public static string SearchEngineWeb {
+            get {
+                return ResourceManager.GetString("SearchEngineWeb", resourceCulture);
             }
         }
         

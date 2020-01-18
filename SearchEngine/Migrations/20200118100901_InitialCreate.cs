@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace SearchEngine.Migrations
+namespace SearchEngine.Web.Migrations
 {
     public partial class InitialCreate : Migration
     {

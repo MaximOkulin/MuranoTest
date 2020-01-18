@@ -688,11 +688,11 @@
   <data name="Response" xml:space="preserve">
     <value>Response</value>
   </data>
-  <data name="SearchEngine" xml:space="preserve">
-    <value>SearchEngine</value>
-  </data>
   <data name="SearchEngineBusinessEngines" xml:space="preserve">
     <value>SearchEngine.Business.Engines.{0}Engine</value>
+  </data>
+  <data name="SearchEngineWeb" xml:space="preserve">
+    <value>SearchEngine.Web</value>
   </data>
   <data name="WhiteSpaceSymbol" xml:space="preserve">
     <value> </value>

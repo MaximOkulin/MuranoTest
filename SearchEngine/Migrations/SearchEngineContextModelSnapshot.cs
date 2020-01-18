@@ -3,9 +3,10 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SearchEngine.DataAccess;
 
-namespace SearchEngine.Migrations
+namespace SearchEngine.Web.Migrations
 {
     [DbContext(typeof(SearchEngineContext))]
     partial class SearchEngineContextModelSnapshot : ModelSnapshot

@@ -33,7 +33,7 @@ namespace SearchEngine
             
             services.AddDbContext<SearchEngineContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString(StringResources.DatabaseName),
-                x => x.MigrationsAssembly(StringResources.SearchEngine)));
+                x => x.MigrationsAssembly(StringResources.SearchEngineWeb)));
 
             services.AddScoped<IRepository, SQLSearchRepository>();
 
