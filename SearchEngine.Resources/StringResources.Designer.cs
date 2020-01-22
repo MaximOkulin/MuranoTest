@@ -118,6 +118,19 @@ namespace PublicResXFileCodeGenerator {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {
+        ///    &quot;kind&quot;: &quot;customsearch#search&quot;,
+        ///    &quot;url&quot;: {
+        ///        &quot;type&quot;: &quot;application/json&quot;,
+        ///        &quot;template&quot;: &quot;https://www.googleapis.com/customsearch/v1?q={searchTerms}&amp;num={count?}&amp;start={startIndex?}&amp;lr={language?}&amp;safe={safe?}&amp;cx={cx?}&amp;sort={sort?}&amp;filter={filter?}&amp;gl={gl?}&amp;cr={cr?}&amp;googlehost={googleHost?}&amp;c2coff={disableCnTwTranslation?}&amp;hq={hq?}&amp;hl={hl?}&amp;siteSearch={siteSearch?}&amp;siteSearchFilter={siteSearchFilter?}&amp;exactTerms={exactTerms?}&amp;excludeTerms={excludeTerms?}&amp;linkSite={linkSite?}&amp;orTerms={or [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string GoogleEmpireStateBuildingTestJson {
+            get {
+                return ResourceManager.GetString("GoogleEmpireStateBuildingTestJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to GoogleSettings.
         /// </summary>
         public static string GoogleSettings {

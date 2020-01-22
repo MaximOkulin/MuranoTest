@@ -335,6 +335,145 @@
   <data name="Engine" xml:space="preserve">
     <value>Engine</value>
   </data>
+  <data name="GoogleEmpireStateBuildingTestJson" xml:space="preserve">
+    <value>{
+    "kind": "customsearch#search",
+    "url": {
+        "type": "application/json",
+        "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&amp;num={count?}&amp;start={startIndex?}&amp;lr={language?}&amp;safe={safe?}&amp;cx={cx?}&amp;sort={sort?}&amp;filter={filter?}&amp;gl={gl?}&amp;cr={cr?}&amp;googlehost={googleHost?}&amp;c2coff={disableCnTwTranslation?}&amp;hq={hq?}&amp;hl={hl?}&amp;siteSearch={siteSearch?}&amp;siteSearchFilter={siteSearchFilter?}&amp;exactTerms={exactTerms?}&amp;excludeTerms={excludeTerms?}&amp;linkSite={linkSite?}&amp;orTerms={orTerms?}&amp;relatedSite={relatedSite?}&amp;dateRestrict={dateRestrict?}&amp;lowRange={lowRange?}&amp;highRange={highRange?}&amp;searchType={searchType}&amp;fileType={fileType?}&amp;rights={rights?}&amp;imgSize={imgSize?}&amp;imgType={imgType?}&amp;imgColorType={imgColorType?}&amp;imgDominantColor={imgDominantColor?}&amp;alt=json"
+    },
+    "queries": {
+        "request": [{
+            "title": "Google Custom Search - Empire+State+Building",
+            "totalResults": "871000",
+            "searchTerms": "Empire+State+Building",
+            "count": 10,
+            "startIndex": 1,
+            "inputEncoding": "utf8",
+            "outputEncoding": "utf8",
+            "safe": "off",
+            "cx": "008892241395134864135:cu97aeslmrd"
+        }],
+        "nextPage": [{
+            "title": "Google Custom Search - Empire+State+Building",
+            "totalResults": "871000",
+            "searchTerms": "Empire+State+Building",
+            "count": 10,
+            "startIndex": 11,
+            "inputEncoding": "utf8",
+            "outputEncoding": "utf8",
+            "safe": "off",
+            "cx": "008892241395134864135:cu97aeslmrd"
+        }]
+    },
+    "context": {"title": "*.ru"},
+    "searchInformation": {
+        "searchTime": 0.80138,
+        "formattedSearchTime": "0.80",
+        "totalResults": "871000",
+        "formattedTotalResults": "871,000"
+    },
+    "items": [
+        {
+            "kind": "customsearch#result",
+            "title": "Places to Visit in New York - Observation Deck | Empire State Building",
+            "htmlTitle": "Places to Visit in New York - Observation Deck | &lt;b&gt;Empire State Building&lt;\/b&gt;",
+            "link": "https://u2556513ml.ha002.t.justns.ru/link.php?u=Urls://h4x5p4h4z2p2v2v4s4t4z374y5i5l4q484q2k5m4t5w2i5t4m4u5m4m4l564d4k4i5e584g5k4t4o484e4w574n224l4o4",
+            "displayLink": "u2556513ml.ha002.t.justns.ru",
+            "snippet": "The Empire State Building is more than a spectacular view. It's an immersive \nexperience inside a world famous landmark. In addition to our Observation Decks\n, ...",
+            "htmlSnippet": "The &lt;b&gt;Empire State Building&lt;\/b&gt; is more than a spectacular view. It&amp;#39;s an immersive &lt;br&gt;\nexperience inside a world famous landmark. In addition to our Observation Decks&lt;br&gt;\n,&amp;nbsp;...",
+            "cacheId": "CAcn88XuBvYJ",
+            "formattedUrl": "https://u2556513ml.ha002.t.justns.ru/link.php?u=Urls://...",
+            "htmlFormattedUrl": "https://u2556513ml.ha002.t.justns.ru/link.php?u=Urls://...",
+            "pagemap": {
+                "cse_thumbnail": [{
+                    "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQUz1nOLdc_YOGD5Vh51u-4OJVdF_qKOrwBbxfjZtPUjJrsqw6_mGjFlzDX",
+                    "width": "275",
+                    "height": "183"
+                }],
+                "metatags": [{
+                    "og:type": "article",
+                    "twitter:card": "summary",
+                    "twitter:title": "The Empire State Building",
+                    "og:site_name": "Empire State Building",
+                    "twitter:site": "@EmpireStateBldg",
+                    "viewport": "width=device-width",
+                    "twitter:url": "https://www.esbnyc.com/explore",
+                    "og:title": "The Empire State Building",
+                    "og:url": "https://www.esbnyc.com/explore",
+                    "twitter:creator": "@EmpireStateBldg"
+                }],
+                "cse_image": [{"src": "https://www.esbnyc.com/sites/default/files/empire_state_building_entrance.jpg"}]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Category:Empire State Building in fiction - Wikipedia",
+            "htmlTitle": "Category:&lt;b&gt;Empire State Building&lt;\/b&gt; in fiction - Wikipedia",
+            "link": "http://en.wiki.bks-tv.ru/wiki/Category:Empire_State_Building_in_fiction",
+            "displayLink": "en.wiki.bks-tv.ru",
+            "snippet": "Pages in category \"Empire State Building in fiction\". The following 17 pages are \nin this category, out of 17 total. This list may not reflect recent changes (learn ...",
+            "htmlSnippet": "Pages in category &amp;quot;&lt;b&gt;Empire State Building&lt;\/b&gt; in fiction&amp;quot;. The following 17 pages are &lt;br&gt;\nin this category, out of 17 total. This list may not reflect recent changes (learn&amp;nbsp;...",
+            "cacheId": "Z_zbTNxTQVIJ",
+            "formattedUrl": "en.wiki.bks-tv.ru/wiki/Category:Empire_State_Building_in_fiction",
+            "htmlFormattedUrl": "en.wiki.bks-tv.ru/wiki/Category:&lt;b&gt;Empire&lt;\/b&gt;_&lt;b&gt;State&lt;\/b&gt;_&lt;b&gt;Building&lt;\/b&gt;_in_fiction",
+            "pagemap": {"metatags": [{"referrer": "origin"}]}
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Lawyer dies in Empire suicide horror - New York Daily News",
+            "htmlTitle": "Lawyer dies in &lt;b&gt;Empire&lt;\/b&gt; suicide horror - New York Daily News",
+            "link": "https://amp.ng.ru/mobile/ng-ru/amp/?p=http://www.nydailynews.com/news/2007/04/14/2007-04-14_lawyer_dies_in_empire_suicide_horror.html",
+            "displayLink": "amp.ng.ru",
+            "snippet": "Apr 14, 2007 ... A lawyer leaped to his death from a 69th-floor office at the Empire State Building \nyesterday, severing a leg that crashed to the sidewalk in front ...",
+            "htmlSnippet": "Apr 14, 2007 &lt;b&gt;...&lt;\/b&gt; A lawyer leaped to his death from a 69th-floor office at the &lt;b&gt;Empire State Building&lt;\/b&gt; &lt;br&gt;\nyesterday, severing a leg that crashed to the sidewalk in front&amp;nbsp;...",
+            "cacheId": "SfIectZjZtcJ",
+            "formattedUrl": "https://amp.ng.ru/mobile/ng-ru/amp/?p=http://...04...empire...",
+            "htmlFormattedUrl": "https://amp.ng.ru/mobile/ng-ru/amp/?p=http://...04...&lt;b&gt;empire&lt;\/b&gt;...",
+            "pagemap": {
+                "speakablespecification": [{
+                    "cssselector": "h1",
+                    "xpath": "/html/head/meta[@name='description']/@content",
+                    "description": "A lawyer leaped to his death from a 69th-floor office at the Empire State Building yesterday, severing a leg that crashed to the sidewalk in front of horrified onlookers."
+                }],
+                "metatags": [{
+                    "date": "2007-04-14T08:00:00Z",
+                    "copyright": "Copyright (c) 2020, New York Daily News",
+                    "twitter:card": "summary_large_image",
+                    "og:site_name": "nydailynews.com",
+                    "taboolanewsroomenable": "true",
+                    "rating": "general",
+                    "language": "English (United States), en-US",
+                    "ptype": "s",
+                    "y_key": "cee2fe4077f8d050",
+                    "distribution": "global",
+                    "twitter:creator": "@nydailynews",
+                    "og:description": "A lawyer leaped to his death from a 69th-floor office at the Empire State Building yesterday, severing a leg that crashed to the sidewalk in front of horrified onlookers.",
+                    "twitter:site": "@nydailynews",
+                    "fb:page_id": "268914272540,176080452497593",
+                    "fb:admins": "1594068001",
+                    "article:content_tier": "metered",
+                    "fb_title": "Lawyer dies in Empire suicide horror",
+                    "twitter:title": "Lawyer dies in Empire suicide horror",
+                    "og:type": "article",
+                    "article:section": "News",
+                    "msvalidate.01": "02916AAC0DA8B068EFE01D721E03ED7E",
+                    "author": "Kerry Burke, XANA O'NEILL, ROBERT F. MOOREDAILY NEWS WRITERS",
+                    "og:title": "Lawyer dies in Empire suicide horror",
+                    "googlebot-news": "index",
+                    "fb:pages": "268914272540, 176080452497593",
+                    "fb:app_id": "107464888913",
+                    "viewport": "width=device-width, minimum-scale=1, initial-scale=1",
+                    "twitter:description": "A lawyer leaped to his death from a 69th-floor office at the Empire State Building yesterday, severing a leg that crashed to the sidewalk in front of horrified onlookers.",
+                    "og:locale": "en_US",
+                    "og:url": "https://www.nydailynews.com/news/lawyer-dies-empire-suicide-horror-article-1.208440",
+                    "article:opinion": "false"
+                }]
+            }
+        }
+    ]
+}</value>
+  </data>
   <data name="GoogleSettings" xml:space="preserve">
     <value>GoogleSettings</value>
   </data>

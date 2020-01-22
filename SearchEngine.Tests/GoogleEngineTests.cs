@@ -8,6 +8,9 @@ using Xunit;
 using FluentAssertions;
 using SearchEngine.Business.Settings;
 using RichardSzalay.MockHttp;
+using System.Net.Http;
+using System.Threading;
+using System;
 
 namespace SearchEngine.Tests
 {
@@ -27,8 +30,57 @@ namespace SearchEngine.Tests
 
             public void SetupHttpClientWithMock(MockHttpMessageHandler mockHttp)
             {
-                HttpClient = new System.Net.Http.HttpClient(mockHttp);
+                HttpClient = new HttpClient(mockHttp);
             }
+        }
+
+        [Fact]
+        public void Execute_GetGoodResponse()
+        {
+            // arrange
+            IOptions<GoogleSettings> options = Options.Create<GoogleSettings>(new GoogleSettings
+            {
+                Name = "Google",
+                RequestFormat = "https://www.googleapis.com/customsearch/v1?{0}&q={1}&cx=008892241395134864135:cu97aeslmrd&num=10",
+                Value = "key=AIzaSyDjIxUEe6flD99KChSJ3248Lc_4E_FbtCo"
+            });
+
+            var googleEngine = new GoogleEngineChild(options);
+            string query = "Empire State Building";
+
+            var mockHttp = new MockHttpMessageHandler();
+            mockHttp.When("https://www.googleapis.com/customsearch/v1?key=AIzaSyDjIxUEe6flD99KChSJ3248Lc_4E_FbtCo&q=Empire%2BState%2BBuilding&cx=008892241395134864135:cu97aeslmrd&num=10").
+                Respond("application/json", StringResources.GoogleEmpireStateBuildingTestJson);
+
+            googleEngine.SetupHttpClientWithMock(mockHttp);
+
+            var cancellationTokenSource = new CancellationTokenSource();
+
+            GoogleResponse expected = new GoogleResponse()
+            {
+                Items = new List<Item>
+                {
+                    new Item { Title = "Places to Visit in New York - Observation Deck | Empire State Building", Link = "https://u2556513ml.ha002.t.justns.ru/link.php?u=Urls://h4x5p4h4z2p2v2v4s4t4z374y5i5l4q484q2k5m4t5w2i5t4m4u5m4m4l564d4k4i5e584g5k4t4o484e4w574n224l4o4" },
+                    new Item { Title = "Category:Empire State Building in fiction - Wikipedia", Link = "http://en.wiki.bks-tv.ru/wiki/Category:Empire_State_Building_in_fiction"},
+                    new Item { Title = "Lawyer dies in Empire suicide horror - New York Daily News", Link = "https://amp.ng.ru/mobile/ng-ru/amp/?p=http://www.nydailynews.com/news/2007/04/14/2007-04-14_lawyer_dies_in_empire_suicide_horror.html"},
+                }
+            };
+
+            // act
+            var response = googleEngine.Execute(query, cancellationTokenSource.Token).Result;
+            var act = new GoogleResponse();
+
+            if (response is GoogleResponse resp)
+            {
+                act = resp;
+            }
+            else
+            {
+                throw new System.Exception("Recieved response is not GoogleResponse");
+            }
+
+            // assert
+            expected.Should().BeEquivalentTo(act, options => options.Including(o => o.Items).Excluding(o => o.Name));
         }
 
         [Fact]
