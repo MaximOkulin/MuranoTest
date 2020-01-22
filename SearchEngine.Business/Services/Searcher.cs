@@ -36,7 +36,7 @@ namespace SearchEngine.Business.Services
 
             foreach (var searchEngine in _searchEngines)
             {
-                tasks.Add(searchEngine.Execute(query, cts.Token));
+                tasks.Add(searchEngine.ExecuteAsync(query, cts.Token));
             }
 
             SearchResultInfo searchResultInfo = null;

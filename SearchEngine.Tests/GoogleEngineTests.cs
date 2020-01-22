@@ -11,6 +11,7 @@ using RichardSzalay.MockHttp;
 using System.Net.Http;
 using System.Threading;
 using System;
+using System.Threading.Tasks;
 
 namespace SearchEngine.Tests
 {
@@ -35,7 +36,7 @@ namespace SearchEngine.Tests
         }
 
         [Fact]
-        public void Execute_GetGoodResponse()
+        public async Task<int> Execute_GetGoodResponse()
         {
             // arrange
             IOptions<GoogleSettings> options = Options.Create<GoogleSettings>(new GoogleSettings
@@ -54,33 +55,23 @@ namespace SearchEngine.Tests
 
             googleEngine.SetupHttpClientWithMock(mockHttp);
 
-            var cancellationTokenSource = new CancellationTokenSource();
-
             GoogleResponse expected = new GoogleResponse()
             {
                 Items = new List<Item>
                 {
-                    new Item { Title = "Places to Visit in New York - Observation Deck | Empire State Building", Link = "https://u2556513ml.ha002.t.justns.ru/link.php?u=Urls://h4x5p4h4z2p2v2v4s4t4z374y5i5l4q484q2k5m4t5w2i5t4m4u5m4m4l564d4k4i5e584g5k4t4o484e4w574n224l4o4" },
+                    new Item { Title = "Places to Visit in New Yorkj - Observation Deck | Empire State Building", Link = "https://u2556513ml.ha002.t.justns.ru/link.php?u=Urls://h4x5p4h4z2p2v2v4s4t4z374y5i5l4q484q2k5m4t5w2i5t4m4u5m4m4l564d4k4i5e584g5k4t4o484e4w574n224l4o4" },
                     new Item { Title = "Category:Empire State Building in fiction - Wikipedia", Link = "http://en.wiki.bks-tv.ru/wiki/Category:Empire_State_Building_in_fiction"},
                     new Item { Title = "Lawyer dies in Empire suicide horror - New York Daily News", Link = "https://amp.ng.ru/mobile/ng-ru/amp/?p=http://www.nydailynews.com/news/2007/04/14/2007-04-14_lawyer_dies_in_empire_suicide_horror.html"},
                 }
             };
 
             // act
-            var response = googleEngine.Execute(query, cancellationTokenSource.Token).Result;
-            var act = new GoogleResponse();
-
-            if (response is GoogleResponse resp)
-            {
-                act = resp;
-            }
-            else
-            {
-                throw new System.Exception("Recieved response is not GoogleResponse");
-            }
+            var response = await googleEngine.ExecuteAsync(query, CancellationToken.None);
 
             // assert
-            expected.Should().BeEquivalentTo(act, options => options.Including(o => o.Items).Excluding(o => o.Name));
+            response.Should().BeEquivalentTo(expected, options => options.Including(o => o.Items).Excluding(o => o.Name));
+
+            return 0;
         }
 
         [Fact]
@@ -108,10 +99,9 @@ namespace SearchEngine.Tests
 
             // act
             var actual = googleEngine.ParseResponse(StringResources.GoogleTestJson);
-            var act = actual as GoogleResponse;
 
             // assert
-            expected.Should().BeEquivalentTo(act, options => options.Including(o => o.Items).Excluding(o => o.Name));
+            actual.Should().BeEquivalentTo(expected, options => options.Including(o => o.Items).Excluding(o => o.Name));
         }
     }
 }

@@ -40,8 +40,8 @@ namespace SearchEngine.Tests
             var act = actual as yandexsearch;
 
             // assert
-            expected.Should()
-                .BeEquivalentTo(act, options => options.Including(r => r.response.results.grouping.group).Excluding(o => o.Name));
+            act.Should()
+                .BeEquivalentTo(expected, options => options.Including(r => r.response.results.grouping.group).Excluding(o => o.Name));
         }
     }
 }

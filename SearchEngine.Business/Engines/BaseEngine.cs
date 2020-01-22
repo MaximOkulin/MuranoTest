@@ -13,7 +13,7 @@ namespace SearchEngine.Business.Engines
     /// </summary>
     public abstract class BaseEngine : IEngine
     {
-        protected static HttpClient HttpClient = new HttpClient();
+        protected HttpClient HttpClient = new HttpClient();
         public ISettings Settings { get; set; }
         public string EngineName { 
             get
@@ -28,7 +28,7 @@ namespace SearchEngine.Business.Engines
         /// <param name="query"></param>
         /// <param name="token"></param>
         /// <returns></returns>
-        public Task<IResponse> Execute(string query, CancellationToken token)
+        public Task<IResponse> ExecuteAsync(string query, CancellationToken token)
         {
             Task<IResponse> result = null;
             try

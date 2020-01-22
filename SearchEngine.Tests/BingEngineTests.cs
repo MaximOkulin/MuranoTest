@@ -49,8 +49,8 @@ namespace SearchEngine.Tests
             var act = actual as BingResponse;
 
             // assert
-            expected.Should()
-                .BeEquivalentTo(act, options => options.Including(o => o.webPages).Excluding(o => o.Name));
+            act.Should()
+                .BeEquivalentTo(expected, options => options.Including(o => o.webPages).Excluding(o => o.Name));
         }
     }
 }
