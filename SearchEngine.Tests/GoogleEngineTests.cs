@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using Xunit;
 using FluentAssertions;
 using SearchEngine.Business.Settings;
+using RichardSzalay.MockHttp;
 
 namespace SearchEngine.Tests
 {
@@ -22,6 +23,11 @@ namespace SearchEngine.Tests
             public new IResponse ParseResponse(string response)
             {
                 return base.ParseResponse(response);
+            }
+
+            public void SetupHttpClientWithMock(MockHttpMessageHandler mockHttp)
+            {
+                HttpClient = new System.Net.Http.HttpClient(mockHttp);
             }
         }
 
