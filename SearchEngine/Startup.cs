@@ -44,10 +44,8 @@ namespace SearchEngine
             services.Configure<YandexSettings>(Configuration.GetSection(StringResources.YandexSettings));
             services.Configure<BingSettings>(Configuration.GetSection(StringResources.BingSettings));
 
-            services.TryAddTransient(s =>
-            {
-                return s.GetRequiredService<IHttpClientFactory>().CreateClient(string.Empty);
-            });
+
+            services.AddSingleton(s => s.GetRequiredService<IHttpClientFactory>().CreateClient(string.Empty));
 
             services.AddSingleton<IEngine, GoogleEngine>();
             services.AddSingleton<IEngine, YandexEngine>();
