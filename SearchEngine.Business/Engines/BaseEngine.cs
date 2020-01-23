@@ -13,7 +13,8 @@ namespace SearchEngine.Business.Engines
     /// </summary>
     public abstract class BaseEngine : IEngine
     {
-        protected HttpClient HttpClient = new HttpClient();
+        protected HttpClient HttpClient { get; }
+
         public ISettings Settings { get; set; }
         public string EngineName { 
             get
