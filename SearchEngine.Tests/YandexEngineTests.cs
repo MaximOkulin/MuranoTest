@@ -18,7 +18,12 @@ namespace SearchEngine.Tests
     {
         private class YandexEngineChild : YandexEngine
         {
-            public YandexEngineChild(IOptions<YandexSettings> settings) : base(settings)
+            public YandexEngineChild(IOptions<YandexSettings> settings, HttpClient httpClient) : base(settings, httpClient)
+            {
+
+            }
+
+            public YandexEngineChild(IOptions<YandexSettings> settings) : this(settings, new HttpClient())
             {
 
             }
@@ -26,11 +31,6 @@ namespace SearchEngine.Tests
             public new IResponse ParseResponse(string response)
             {
                 return base.ParseResponse(response);
-            }
-
-            public void SetupHttpClientWithMock(MockHttpMessageHandler mockHttp)
-            {
-                HttpClient = new HttpClient(mockHttp);
             }
         }
 
@@ -45,13 +45,12 @@ namespace SearchEngine.Tests
                 Value = "user=maxim-okulin&key=03.271131870:3cd406dd968f16a13abeb89e0af29889"
             });
 
-            var yandexEngine = new YandexEngineChild(options);
             string query = TestStringResources.YandexGroupOfEightQuery;
 
             var mockHttp = new MockHttpMessageHandler();
             mockHttp.When(TestStringResources.YandexGroupOfEightTestRequest).Respond(StringResources.MIME_Xml, TestStringResources.YandexGroupOfEightTestXml);
 
-            yandexEngine.SetupHttpClientWithMock(mockHttp);
+            var yandexEngine = new YandexEngineChild(options, new HttpClient(mockHttp));
 
             yandexsearch expected = TestHelper.GetTestGroupOfEightSearch();
 

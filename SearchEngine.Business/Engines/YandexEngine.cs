@@ -7,12 +7,13 @@ using System.Xml.Serialization;
 using System;
 using System.Text.RegularExpressions;
 using SearchEngine.Business.Settings;
+using System.Net.Http;
 
 namespace SearchEngine.Business.Engines
 {
     public class YandexEngine : BaseEngine
     {
-        public YandexEngine(IOptions<YandexSettings> settings)
+        public YandexEngine(IOptions<YandexSettings> settings, HttpClient httpClient) :  base(httpClient)
         {
             Settings = settings.Value;
         }

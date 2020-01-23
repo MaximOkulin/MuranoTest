@@ -7,12 +7,13 @@ using System.Threading;
 using SearchEngine.Business.Settings;
 using SearchEngine.Business.Extensions;
 using System;
+using System.Net.Http;
 
 namespace SearchEngine.Business.Engines
 {
     public class BingEngine : BaseEngine
     {
-        public BingEngine(IOptions<BingSettings> settings)
+        public BingEngine(IOptions<BingSettings> settings, HttpClient httpClient) : base(httpClient)
         {
             Settings = settings.Value;
         }

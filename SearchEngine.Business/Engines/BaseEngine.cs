@@ -22,6 +22,11 @@ namespace SearchEngine.Business.Engines
             }
         }
 
+        protected BaseEngine(HttpClient httpClient)
+        {
+            HttpClient = httpClient;
+        }
+
         /// <summary>
         /// Executes search
         /// </summary>

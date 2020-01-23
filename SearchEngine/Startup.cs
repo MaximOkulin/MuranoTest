@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using PublicResXFileCodeGenerator;
 using SearchEngine.Business.Engines;
@@ -13,6 +14,7 @@ using SearchEngine.DataAccess;
 using SearchEngine.DataAccess.Interfaces;
 using SearchEngine.DataAccess.Repositories;
 using SearchEngine.Models;
+using System.Net.Http;
 
 namespace SearchEngine
 {
@@ -37,15 +39,25 @@ namespace SearchEngine
 
             services.AddScoped<IRepository, SQLSearchRepository>();
 
-            services.AddScoped<ISearcher, Searcher>();
-
+            
             services.Configure<GoogleSettings>(Configuration.GetSection(StringResources.GoogleSettings));
             services.Configure<YandexSettings>(Configuration.GetSection(StringResources.YandexSettings));
             services.Configure<BingSettings>(Configuration.GetSection(StringResources.BingSettings));
 
-            services.AddScoped<IEngine, GoogleEngine>();
-            services.AddScoped<IEngine, YandexEngine>();
-            services.AddScoped<IEngine, BingEngine>();
+            services.TryAddTransient(s =>
+            {
+                return s.GetRequiredService<IHttpClientFactory>().CreateClient(string.Empty);
+            });
+
+            services.AddSingleton<IEngine, GoogleEngine>();
+            services.AddSingleton<IEngine, YandexEngine>();
+            services.AddSingleton<IEngine, BingEngine>();
+
+            services.AddHttpClient<GoogleEngine>();
+            services.AddHttpClient<YandexEngine>();
+            services.AddHttpClient<BingEngine>();
+
+            services.AddScoped<ISearcher, Searcher>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

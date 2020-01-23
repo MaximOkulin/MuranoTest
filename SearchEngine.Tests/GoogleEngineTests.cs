@@ -18,7 +18,12 @@ namespace SearchEngine.Tests
     {
         private class GoogleEngineChild : GoogleEngine
         {
-            public GoogleEngineChild(IOptions<GoogleSettings> settings) : base(settings)
+            public GoogleEngineChild(IOptions<GoogleSettings> settings, HttpClient httpClient) : base(settings, httpClient)
+            {
+
+            }
+
+            public GoogleEngineChild(IOptions<GoogleSettings> settings) : this(settings, new HttpClient())
             {
 
             }
@@ -26,11 +31,6 @@ namespace SearchEngine.Tests
             public new IResponse ParseResponse(string response)
             {
                 return base.ParseResponse(response);
-            }
-
-            public void SetupHttpClientWithMock(MockHttpMessageHandler mockHttp)
-            {
-                HttpClient = new HttpClient(mockHttp);
             }
         }
 
@@ -45,14 +45,13 @@ namespace SearchEngine.Tests
                 Value = "key=AIzaSyDjIxUEe6flD99KChSJ3248Lc_4E_FbtCo"
             });
 
-            var googleEngine = new GoogleEngineChild(options);
             string query = TestStringResources.GoogleEmpireStateBuildingQuery;
 
             var mockHttp = new MockHttpMessageHandler();
             mockHttp.When(TestStringResources.GoogleEmpireStateBuildingTestRequest).
                 Respond(StringResources.MIME_Json, TestStringResources.GoogleEmpireStateBuildingTestJson);
 
-            googleEngine.SetupHttpClientWithMock(mockHttp);
+            var googleEngine = new GoogleEngineChild(options, new HttpClient(mockHttp));
 
             GoogleResponse expected = new GoogleResponse()
             {

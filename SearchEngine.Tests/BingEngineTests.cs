@@ -18,19 +18,19 @@ namespace SearchEngine.Tests
     {
         private class BingEngineChild : BingEngine
         {
-            public BingEngineChild(IOptions<BingSettings> settings) : base(settings)
+            public BingEngineChild(IOptions<BingSettings> settings, HttpClient httpClient) : base(settings, httpClient)
             {
                 
+            }
+
+            public BingEngineChild(IOptions<BingSettings> settings) : this(settings, new HttpClient())
+            {
+
             }
 
             public new IResponse ParseResponse(string response)
             {
                 return base.ParseResponse(response);
-            }
-
-            public void SetupHttpClientWithMock(MockHttpMessageHandler mockHttp)
-            {
-                HttpClient = new HttpClient(mockHttp);
             }
         }
 
@@ -45,14 +45,13 @@ namespace SearchEngine.Tests
                 Value = "Ocp-Apim-Subscription-Key"
             });
 
-            var bingEngine = new BingEngineChild(options);
             string query = TestStringResources.BingDevExpressMVC5TreeViewQuery;
 
             var mockHttp = new MockHttpMessageHandler();
             mockHttp.When(TestStringResources.BingDevExpressMVC5TreeViewTestRequest)
                 .Respond(StringResources.MIME_Json, TestStringResources.BingDevExpressMVC5TreeViewTestJson);
 
-            bingEngine.SetupHttpClientWithMock(mockHttp);
+            var bingEngine = new BingEngineChild(options, new HttpClient(mockHttp));
 
             BingResponse expected = new BingResponse()
             {
