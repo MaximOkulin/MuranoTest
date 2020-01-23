@@ -5,6 +5,8 @@ using SearchEngine.Business.Interfaces;
 using Microsoft.Extensions.Options;
 using System.Threading;
 using SearchEngine.Business.Settings;
+using SearchEngine.Business.Extensions;
+using System;
 
 namespace SearchEngine.Business.Engines
 {
@@ -20,6 +22,14 @@ namespace SearchEngine.Business.Engines
             HttpClient.DefaultRequestHeaders.Add(StringResources.OcpApimSubscriptionKey, Settings.Value);
 
             return await base.ExecuteRequest(requestString, token);
+        }
+
+        protected override string PrepareRequest(string query)
+        {
+            query = Uri.EscapeDataString(query.ReplaceWhiteSpaceToPlusSymbol());
+            string request = string.Format(Settings.RequestFormat, query);
+
+            return request;
         }
 
         protected override IResponse ParseResponse(string response)

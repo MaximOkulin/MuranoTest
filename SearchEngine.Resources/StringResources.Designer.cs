@@ -79,27 +79,6 @@ namespace PublicResXFileCodeGenerator {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {
-        ///    &quot;_type&quot;: &quot;SearchResponse&quot;,
-        ///    &quot;instrumentation&quot;: {
-        ///        &quot;pingUrlBase&quot;: &quot;https://www.bingapis.com/api/ping?IG=E86668D804C149438DFC0972CE52C9E3&amp;CID=070910FF0C0362112C11188E0DD06323&amp;ID=&quot;,
-        ///        &quot;pageLoadPingUrl&quot;: &quot;https://www.bingapis.com/api/ping/pageload&quot;
-        ///    },
-        ///    &quot;webPages&quot;: {
-        ///        &quot;webSearchUrl&quot;: &quot;https://www.bing.com/search?q=bill+gates&quot;,
-        ///        &quot;webSearchUrlPingSuffix&quot;: &quot;DevEx,5425.1&quot;,
-        ///        &quot;totalEstimatedMatches&quot;: 14100000,
-        ///        &quot;value&quot;: [
-        ///            {
-        ///               [rest of string was truncated]&quot;;.
-        /// </summary>
-        public static string BingTestJson {
-            get {
-                return ResourceManager.GetString("BingTestJson", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to SearchEngineDatabase.
         /// </summary>
         public static string DatabaseName {
@@ -118,15 +97,11 @@ namespace PublicResXFileCodeGenerator {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {
-        ///    &quot;kind&quot;: &quot;customsearch#search&quot;,
-        ///    &quot;url&quot;: {
-        ///        &quot;type&quot;: &quot;application/json&quot;,
-        ///        &quot;template&quot;: &quot;https://www.googleapis.com/customsearch/v1?q={searchTerms}&amp;num={count?}&amp;start={startIndex?}&amp;lr={language?}&amp;safe={safe?}&amp;cx={cx?}&amp;sort={sort?}&amp;filter={filter?}&amp;gl={gl?}&amp;cr={cr?}&amp;googlehost={googleHost?}&amp;c2coff={disableCnTwTranslation?}&amp;hq={hq?}&amp;hl={hl?}&amp;siteSearch={siteSearch?}&amp;siteSearchFilter={siteSearchFilter?}&amp;exactTerms={exactTerms?}&amp;excludeTerms={excludeTerms?}&amp;linkSite={linkSite?}&amp;orTerms={or [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Google.
         /// </summary>
-        public static string GoogleEmpireStateBuildingTestJson {
+        public static string Google {
             get {
-                return ResourceManager.GetString("GoogleEmpireStateBuildingTestJson", resourceCulture);
+                return ResourceManager.GetString("Google", resourceCulture);
             }
         }
         
@@ -140,15 +115,20 @@ namespace PublicResXFileCodeGenerator {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {
-        ///    &quot;kind&quot;: &quot;customsearch#search&quot;,
-        ///    &quot;url&quot;: {
-        ///        &quot;type&quot;: &quot;application/json&quot;,
-        ///        &quot;template&quot;: &quot;https://www.googleapis.com/customsearch/v1?q={searchTerms}&amp;num={count?}&amp;start={startIndex?}&amp;lr={language?}&amp;safe={safe?}&amp;cx={cx?}&amp;sort={sort?}&amp;filter={filter?}&amp;gl={gl?}&amp;cr={cr?}&amp;googlehost={googleHost?}&amp;c2coff={disableCnTwTranslation?}&amp;hq={hq?}&amp;hl={hl?}&amp;siteSearch={siteSearch?}&amp;siteSearchFilter={siteSearchFilter?}&amp;exactTerms={exactTerms?}&amp;excludeTerms={excludeTerms?}&amp;linkSite={linkSite?}&amp;orTerms={or [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to application/json.
         /// </summary>
-        public static string GoogleTestJson {
+        public static string MIME_Json {
             get {
-                return ResourceManager.GetString("GoogleTestJson", resourceCulture);
+                return ResourceManager.GetString("MIME_Json", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to application/xml.
+        /// </summary>
+        public static string MIME_Xml {
+            get {
+                return ResourceManager.GetString("MIME_Xml", resourceCulture);
             }
         }
         
@@ -180,15 +160,6 @@ namespace PublicResXFileCodeGenerator {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SearchEngine.Business.Engines.{0}Engine.
-        /// </summary>
-        public static string SearchEngineBusinessEngines {
-            get {
-                return ResourceManager.GetString("SearchEngineBusinessEngines", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to SearchEngine.Web.
         /// </summary>
         public static string SearchEngineWeb {
@@ -207,33 +178,20 @@ namespace PublicResXFileCodeGenerator {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Yandex.
+        /// </summary>
+        public static string Yandex {
+            get {
+                return ResourceManager.GetString("Yandex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to YandexSettings.
         /// </summary>
         public static string YandexSettings {
             get {
                 return ResourceManager.GetString("YandexSettings", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-        ///&lt;yandexsearch version=&quot;1.0&quot;&gt;
-        ///    &lt;request&gt;
-        ///        &lt;query&gt;Казанский Кремль&lt;/query&gt;
-        ///        &lt;page&gt;0&lt;/page&gt;
-        ///        &lt;sortby order=&quot;descending&quot; priority=&quot;no&quot;&gt;rlv&lt;/sortby&gt;
-        ///        &lt;maxpassages/&gt;
-        ///        &lt;groupings&gt;
-        ///            &lt;groupby attr=&quot;d&quot; mode=&quot;deep&quot; groups-on-page=&quot;10&quot; docs-in-group=&quot;1&quot; curcateg=&quot;-1&quot;/&gt;
-        ///        &lt;/groupings&gt;
-        ///    &lt;/request&gt;
-        ///    &lt;response date=&quot;20200116T160853&quot;&gt;
-        ///        &lt;reqid&gt;1579190933543349-9193804179513602050792-vla1-3759-XML&lt;/reqid&gt;
-        ///   [rest of string was truncated]&quot;;.
-        /// </summary>
-        public static string YandexTestXml {
-            get {
-                return ResourceManager.GetString("YandexTestXml", resourceCulture);
             }
         }
     }

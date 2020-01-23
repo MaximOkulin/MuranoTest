@@ -10,6 +10,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Update="TestStringResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TestStringResources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -17,6 +22,11 @@
       <CustomToolNamespace>PublicResXFileCodeGenerator</CustomToolNamespace>
       <LastGenOutput>StringResources.Designer.cs</LastGenOutput>
       <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TestStringResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TestStringResources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>PublicResXFileCodeGenerator</CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>
 
